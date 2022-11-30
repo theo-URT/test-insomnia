@@ -1,7 +1,7 @@
 _id: req_wrk_2336beb589954b61a99abdfe371b5990ecd97c12
 type: Request
 parentId: fld_e90d1628f9754bf4b77406b7e4cf5e18
-modified: 1669807540204
+modified: 1669816146691
 created: 1669805749324
 url: "{{ _.baseUrl }}{{ _.authPort }}/auth-api/auth/orgs/{{ orgId }}/users"
 name: createUsers
@@ -29,7 +29,12 @@ body:
 parameters: []
 headers:
   - name: Content-Type
-    value: application/json
+    value: application/json;v=1
+    id: pair_46eb9887944c41749747f4e6d21e52f2
+  - id: pair_50fe4ddb396f4c808d065f24a5c77c10
+    name: Accept
+    value: application/json;v=1
+    description: ""
 authentication: {}
 metaSortKey: -1669805749409.375
 isPrivate: false

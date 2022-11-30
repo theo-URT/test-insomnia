@@ -1,7 +1,7 @@
 _id: req_wrk_2336beb589954b61a99abdfe371b599055525e1b
 type: Request
 parentId: fld_67fd389f530e4010bdfc6bf6310eca36
-modified: 1669807532724
+modified: 1669816127491
 created: 1669805749326
 url: "{{ _.baseUrl }}{{ _.authPort }}/auth-api/auth/users/logout"
 name: Logout
@@ -16,7 +16,12 @@ body:
 parameters: []
 headers:
   - name: Content-Type
-    value: application/json
+    value: application/json;v=1
+    id: pair_7f019355c3ea405da7ac104921d5c84d
+  - id: pair_f1c3eb7260c3447ab85e779f5c3222f8
+    name: Accept
+    value: application/json;v=1
+    description: ""
 authentication: {}
 metaSortKey: -1669805749377
 isPrivate: false

@@ -1,0 +1,45 @@
+_id: req_wrk_2336beb589954b61a99abdfe371b5990067446cb
+type: Request
+parentId: fld_d923a6d366ba415a8dd43afcf0090623
+modified: 1669816172236
+created: 1669816019441
+url: "{{ _.baseUrl }}{{ _.crmPort }}/crm-api/company"
+name: Create Company
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "companyName": "Manage Space",
+      "isTenant": true,
+      "phoneNumber": "7953669521 | 447953669521",
+      "mobileNumber": "7953669521 | 447953669521",
+      "faxNumber": "7953669521 | 447953669521",
+      "companyAddress": {
+        "addressLineOne": "12 Madison Lane",
+        "addressLineTwo": "Flat 21",
+        "city": "Plymouth",
+        "province": "New York",
+        "postCode": "SE9 6FY",
+        "country": "USA"
+      }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json;v=1
+    id: pair_796b7b7e16a144d492593a54aa65b78c
+  - id: pair_aca3f25adb084f56834b4a4f4b8397dc
+    name: Accept
+    value: application/json;v=1
+    description: ""
+authentication: {}
+metaSortKey: -1669816019541
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

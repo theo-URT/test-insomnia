@@ -1,0 +1,36 @@
+_id: req_wrk_2336beb589954b61a99abdfe371b5990dabcb7a5
+type: Request
+parentId: fld_e6ec2efd91234b2f820e6a05f642b641
+modified: 1669816258044
+created: 1669814444831
+url: '{{ _.baseUrl }}{{ _.auditPort }}/audit-api/contacts"aud	"auditPort":
+  ":3035",ercePortPort'
+name: /audit-api/contacts
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "contactId": "3a27410a-cd83-423e-9e21-dc1c5c9280a9"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json;v=1
+    id: pair_f46280709a4146c0b1944acc9309ec69
+  - id: pair_e8fd3660b6f3463989985f957bee20bb
+    name: Accept
+    value: application/json;v=1
+    description: ""
+authentication:
+  type: bearer
+  token: "{% variable 'accessToken' %}"
+metaSortKey: -1669814444831
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

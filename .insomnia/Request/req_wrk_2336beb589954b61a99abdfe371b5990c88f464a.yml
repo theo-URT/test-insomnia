@@ -1,0 +1,47 @@
+_id: req_wrk_2336beb589954b61a99abdfe371b5990c88f464a
+type: Request
+parentId: fld_f764beebf7d14ab3bb5a7a305c476684
+modified: 1669816184023
+created: 1669816019442
+url: "{{ _.baseUrl }}{{ _.crmPort }}/crm-api/contacts"
+name: Create Contact
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "email": "test123@unionrealtime.com",
+      "firstName": "Jason",
+      "middleInitial": "Grubble",
+      "lastName": "Grubble",
+      "phoneNumber": "7953669521 | 447953669521",
+      "mobileNumber": "7953669521 | 447953669521",
+      "faxNumber": "7953669521 | 447953669521",
+      "contactAddress": {
+        "addressLineOne": "12 Madison Lane",
+        "addressLineTwo": "Flat 21",
+        "city": "Plymouth",
+        "province": "New York",
+        "postCode": "SE9 6FY",
+        "country": "USA"
+      }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json;v=1
+    id: pair_35d957614bf645aaa9936d1a6e76d1cc
+  - id: pair_c6115aefd13c47d2882b777da130160c
+    name: Accept
+    value: application/json;v=1
+    description: ""
+authentication: {}
+metaSortKey: -1669816019442
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,8 +1,8 @@
 _id: wrk_2336beb589954b61a99abdfe371b5990
 type: Workspace
 parentId: null
-modified: 1669805749330
+modified: 1669816019446
 created: 1669804482725
-name: ManageSpace Auth API 1.0
-description: ManageSpace Auth API Documentation
+name: ManageSpace CRM API 1.0
+description: ManageSpace CRM API Documentation
 scope: design

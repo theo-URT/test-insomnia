@@ -1,7 +1,7 @@
 _id: req_wrk_2336beb589954b61a99abdfe371b5990f1894797
 type: Request
 parentId: fld_e90d1628f9754bf4b77406b7e4cf5e18
-modified: 1669807541321
+modified: 1669816161663
 created: 1669805749322
 url: "{{ _.baseUrl }}{{ _.authPort }}/auth-api/auth/resend-verification"
 name: Resend verification code
@@ -16,7 +16,12 @@ body:
 parameters: []
 headers:
   - name: Content-Type
-    value: application/json
+    value: application/json;v=1
+    id: pair_0da960e563cf45af989b5eaacb62af84
+  - id: pair_5ba114ddb4a446899da362424450c811
+    name: Accept
+    value: application/json;v=1
+    description: ""
 authentication: {}
 metaSortKey: -1669805749407.8125
 isPrivate: false

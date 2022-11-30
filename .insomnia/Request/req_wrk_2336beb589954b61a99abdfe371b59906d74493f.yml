@@ -1,7 +1,7 @@
 _id: req_wrk_2336beb589954b61a99abdfe371b59906d74493f
 type: Request
 parentId: fld_f8302153bca54f84a66112e95687ce9c
-modified: 1669807587920
+modified: 1669816230227
 created: 1669805291953
 url: "{{ _.baseUrl }}{{ _.orgPort }}/orgs-api/orgs/{{ orgId }}/users/{{ userId }}"
 name: update user
@@ -19,7 +19,12 @@ body:
 parameters: []
 headers:
   - name: Content-Type
-    value: application/json
+    value: application/json;v=1
+    id: pair_fb98760a972641d6a3d53e8f3df26c00
+  - id: pair_95dc272a76d94952841f45008d7dd3ba
+    name: Accept
+    value: application/json;v=1
+    description: ""
 authentication: {}
 metaSortKey: -1669805291953
 isPrivate: false

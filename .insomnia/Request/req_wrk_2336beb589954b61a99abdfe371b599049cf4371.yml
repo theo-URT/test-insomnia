@@ -1,0 +1,38 @@
+_id: req_wrk_2336beb589954b61a99abdfe371b599049cf4371
+type: Request
+parentId: fld_4dfe1eaebb3f460cbf56735db9ed1cd6
+modified: 1669814968402
+created: 1669814819385
+url: "{{ _.baseUrl }}{{ _.commercePort }}/commerce-api/orgs/{% variable 'orgId'
+  %}/merchandise/save"
+name: Update Merchandise Tax
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "siteId": "{% variable 'siteId' %}",
+      "merchandiseId": "1c9975d2-ddd2-4a30-85b0-08aecc03e7fa",
+      "retailPrice": 2.34,
+      "currencyCode": "USD",
+      "tax": "USD"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json;v=1
+    id: pair_3073f19f40d74100a7981cc885391311
+  - id: pair_5c2175c93bf7477bb8a8147050ee4156
+    name: Accept
+    value: application/json;v=1
+    description: ""
+authentication: {}
+metaSortKey: -1669814819511
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

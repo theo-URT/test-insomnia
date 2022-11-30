@@ -1,7 +1,7 @@
 _id: req_wrk_2336beb589954b61a99abdfe371b599022332f46
 type: Request
 parentId: fld_590ea272bae24d3aa1a3ff4ef3e41b30
-modified: 1669807574896
+modified: 1669816214032
 created: 1669805291956
 url: "{{ _.baseUrl }}{{ _.orgPort }}/orgs-api/orgs/{{ orgId }}/sites/{{ siteId }}"
 name: Update site
@@ -19,7 +19,12 @@ body:
 parameters: []
 headers:
   - name: Content-Type
-    value: application/json
+    value: application/json;v=1
+    id: pair_cdb76eef50144b4b98e4f0ea1738df7c
+  - id: pair_b47cc99538ec45f3a51e67a473721594
+    name: Accept
+    value: application/json;v=1
+    description: ""
 authentication: {}
 metaSortKey: -1669805292032
 isPrivate: false

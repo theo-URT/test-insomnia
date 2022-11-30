@@ -1,7 +1,7 @@
 _id: req_wrk_2336beb589954b61a99abdfe371b5990051cf8c0
 type: Request
 parentId: fld_5016afe37fde42589e9b4c389b8da67c
-modified: 1669807534448
+modified: 1669816133533
 created: 1669805749322
 url: "{{ _.baseUrl }}{{ _.authPort }}/auth-api/auth/password/reset"
 name: Initiates a flow to reset password
@@ -16,7 +16,12 @@ body:
 parameters: []
 headers:
   - name: Content-Type
-    value: application/json
+    value: application/json;v=1
+    id: pair_17e71b11f752470f809fc35355554cd0
+  - id: pair_c9545712f99c4cbb93f1f5a976792447
+    name: Accept
+    value: application/json;v=1
+    description: ""
 authentication: {}
 metaSortKey: -1669805749422
 isPrivate: false

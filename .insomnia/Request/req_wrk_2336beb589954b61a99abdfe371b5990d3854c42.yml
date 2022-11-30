@@ -1,0 +1,35 @@
+_id: req_wrk_2336beb589954b61a99abdfe371b5990d3854c42
+type: Request
+parentId: fld_4dfe1eaebb3f460cbf56735db9ed1cd6
+modified: 1669814960021
+created: 1669814819386
+url: "{{ _.baseUrl }}{{ _.commercePort }}/commerce-api/orgs/{% variable 'orgId'
+  %}/merchandise"
+name: Create Merchandise
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "merchandiseName": "Public Storage",
+      "merchandiseDescription": "Public Storage"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json;v=1
+    id: pair_a6cd789484f44efa85885ecaca83a189
+  - id: pair_c90f176ac7b9426cac058595ea36b011
+    name: Accept
+    value: application/json;v=1
+    description: ""
+authentication: {}
+metaSortKey: -1669814819536
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

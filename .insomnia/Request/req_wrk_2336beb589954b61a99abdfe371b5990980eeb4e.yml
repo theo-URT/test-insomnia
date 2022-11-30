@@ -1,7 +1,7 @@
 _id: req_wrk_2336beb589954b61a99abdfe371b5990980eeb4e
 type: Request
 parentId: fld_e90d1628f9754bf4b77406b7e4cf5e18
-modified: 1669807542156
+modified: 1669816154997
 created: 1669805749323
 url: "{{ _.baseUrl }}{{ _.authPort }}/auth-api/auth/orgs/{{ orgId }}/users/confirm"
 name: confirmUserSignUp
@@ -17,7 +17,12 @@ body:
 parameters: []
 headers:
   - name: Content-Type
-    value: application/json
+    value: application/json;v=1
+    id: pair_ece82d9fb8044203988689f296557044
+  - id: pair_3826c6a668104e968b2f33415262f2a7
+    name: Accept
+    value: application/json;v=1
+    description: ""
 authentication: {}
 metaSortKey: -1669805749408.5938
 isPrivate: false

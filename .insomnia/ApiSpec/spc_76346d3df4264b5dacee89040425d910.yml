@@ -1,1999 +1,3241 @@
 _id: spc_76346d3df4264b5dacee89040425d910
 type: ApiSpec
 parentId: wrk_2336beb589954b61a99abdfe371b5990
-modified: 1669805291963
+modified: 1669806003633
 created: 1669804482726
 fileName: my-spec.yaml
-contents: |-
+contents: >-
   {
+
   "openapi": "3.0.0",
+
   "paths": {
-  "/orgs-api/orgs": {
+
+  "/auth-api/auth/users/login": {
+
   "post": {
-  "operationId": "createOrg",
-  "summary": "create org",
-  "description": "Creates an org",
+
+  "operationId": "login",
+
+  "summary": "Login",
+
+  "description": "TBD",
+
   "parameters": [],
+
   "requestBody": {
+
   "required": true,
+
   "content": {
+
   "application/json": {
+
   "schema": {
-  "$ref": "#/components/schemas/CreateOrgRequestDto"
+
+  "$ref": "#/components/schemas/LoginUserRequestDto"
+
   }
+
   }
+
   }
+
   },
+
   "responses": {
+
   "200": {
+
   "description": ""
+
   },
+
   "202": {
+
   "description": "Accepted."
+
   },
+
   "204": {
+
   "description": "No Content."
+
   },
+
   "301": {
+
   "description": "Moved Permanently."
+
   },
+
   "302": {
+
   "description": "Found."
+
   },
+
   "400": {
+
   "description": "Bad request.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/BadRequestErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "401": {
+
   "description": "Unauthorized.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/UnauthorizedErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "403": {
+
   "description": "Forbidden.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/ForbiddenErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "404": {
+
   "description": "Resource not found.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/NotFoundErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "405": {
+
   "description": "Method not allowed."
+
   },
+
   "406": {
+
   "description": "Not acceptable."
+
   },
+
   "408": {
+
   "description": "Request timed out."
+
   },
+
   "409": {
+
   "description": "Conflict"
+
   },
+
   "410": {
+
   "description": "Gone"
+
   },
+
   "412": {
+
   "description": "Precondition Failed"
+
   },
+
   "413": {
+
   "description": "Payload Too Large"
+
   },
+
   "415": {
+
   "description": "Unsupported Media Type"
+
   },
+
   "422": {
+
   "description": "Unprocessable Entity"
+
   },
+
   "429": {
+
   "description": "Too many requests"
+
   },
+
   "500": {
+
   "description": "Internal server error.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/InternalServerErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "502": {
+
   "description": "Bad Gateway."
+
   },
+
   "503": {
+
   "description": "Service Unavailable."
+
   },
+
   "504": {
+
   "description": "Gateway Timeout."
+
   }
-  },
-  "security": [
-  {
-  "bearer": []
+
   }
-  ]
+
   }
+
   },
-  "/orgs-api/orgs/{orgId}": {
-  "patch": {
-  "operationId": "updateOrg",
-  "summary": "update org",
-  "description": "Updates an org",
-  "parameters": [
-  {
-  "name": "orgId",
-  "required": true,
-  "in": "path",
-  "example": "0bcbb8ae-a183-4c01-acf5-add737a60874",
-  "description": "orgId of the org you're requesting info.",
-  "schema": {
-  "format": "uuid",
-  "type": "string"
-  }
-  }
-  ],
-  "requestBody": {
-  "required": true,
-  "content": {
-  "application/json": {
-  "schema": {
-  "$ref": "#/components/schemas/UpdateOrgRequestDto"
-  }
-  }
-  }
-  },
-  "responses": {
-  "200": {
-  "description": ""
-  },
-  "202": {
-  "description": "Accepted."
-  },
-  "204": {
-  "description": "No Content."
-  },
-  "301": {
-  "description": "Moved Permanently."
-  },
-  "302": {
-  "description": "Found."
-  },
-  "400": {
-  "description": "Bad request.",
-  "content": {
-  "application/json": {
-  "schema": {
-  "$ref": "#/components/schemas/BadRequestErrorResponseDto"
-  }
-  }
-  }
-  },
-  "401": {
-  "description": "Unauthorized.",
-  "content": {
-  "application/json": {
-  "schema": {
-  "$ref": "#/components/schemas/UnauthorizedErrorResponseDto"
-  }
-  }
-  }
-  },
-  "403": {
-  "description": "Forbidden.",
-  "content": {
-  "application/json": {
-  "schema": {
-  "$ref": "#/components/schemas/ForbiddenErrorResponseDto"
-  }
-  }
-  }
-  },
-  "404": {
-  "description": "Resource not found.",
-  "content": {
-  "application/json": {
-  "schema": {
-  "$ref": "#/components/schemas/NotFoundErrorResponseDto"
-  }
-  }
-  }
-  },
-  "405": {
-  "description": "Method not allowed."
-  },
-  "406": {
-  "description": "Not acceptable."
-  },
-  "408": {
-  "description": "Request timed out."
-  },
-  "409": {
-  "description": "Conflict"
-  },
-  "410": {
-  "description": "Gone"
-  },
-  "412": {
-  "description": "Precondition Failed"
-  },
-  "413": {
-  "description": "Payload Too Large"
-  },
-  "415": {
-  "description": "Unsupported Media Type"
-  },
-  "422": {
-  "description": "Unprocessable Entity"
-  },
-  "429": {
-  "description": "Too many requests"
-  },
-  "500": {
-  "description": "Internal server error.",
-  "content": {
-  "application/json": {
-  "schema": {
-  "$ref": "#/components/schemas/InternalServerErrorResponseDto"
-  }
-  }
-  }
-  },
-  "502": {
-  "description": "Bad Gateway."
-  },
-  "503": {
-  "description": "Service Unavailable."
-  },
-  "504": {
-  "description": "Gateway Timeout."
-  }
-  },
-  "security": [
-  {
-  "bearer": []
-  }
-  ]
-  },
+
+  "/auth-api/auth/users/logout": {
+
   "get": {
-  "operationId": "findOne",
-  "summary": "find an org",
-  "description": "Retrieves an org",
-  "parameters": [
-  {
-  "name": "orgId",
+
+  "operationId": "logout",
+
+  "summary": "Logout",
+
+  "description": "TBD",
+
+  "parameters": [],
+
+  "requestBody": {
+
   "required": true,
-  "in": "path",
-  "example": "0bcbb8ae-a183-4c01-acf5-add737a60874",
-  "description": "orgId of the org you're requesting info.",
+
+  "content": {
+
+  "application/json": {
+
   "schema": {
-  "format": "uuid",
-  "type": "string"
+
+  "$ref": "#/components/schemas/LogoutUserRequestDto"
+
   }
+
   }
-  ],
+
+  }
+
+  },
+
   "responses": {
+
   "200": {
+
   "description": ""
+
   },
+
   "202": {
+
   "description": "Accepted."
+
   },
+
   "204": {
+
   "description": "No Content."
+
   },
+
   "301": {
+
   "description": "Moved Permanently."
+
   },
+
   "302": {
+
   "description": "Found."
+
   },
+
   "400": {
+
   "description": "Bad request.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/BadRequestErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "401": {
+
   "description": "Unauthorized.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/UnauthorizedErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "403": {
+
   "description": "Forbidden.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/ForbiddenErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "404": {
+
   "description": "Resource not found.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/NotFoundErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "405": {
+
   "description": "Method not allowed."
+
   },
+
   "406": {
+
   "description": "Not acceptable."
+
   },
+
   "408": {
+
   "description": "Request timed out."
+
   },
+
   "409": {
+
   "description": "Conflict"
+
   },
+
   "410": {
+
   "description": "Gone"
+
   },
+
   "412": {
+
   "description": "Precondition Failed"
+
   },
+
   "413": {
+
   "description": "Payload Too Large"
+
   },
+
   "415": {
+
   "description": "Unsupported Media Type"
+
   },
+
   "422": {
+
   "description": "Unprocessable Entity"
+
   },
+
   "429": {
+
   "description": "Too many requests"
+
   },
+
   "500": {
+
   "description": "Internal server error.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/InternalServerErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "502": {
+
   "description": "Bad Gateway."
+
   },
+
   "503": {
+
   "description": "Service Unavailable."
+
   },
+
   "504": {
+
   "description": "Gateway Timeout."
+
   }
+
   },
+
   "security": [
+
   {
+
   "bearer": []
+
   }
+
   ]
+
   }
+
   },
-  "/orgs-api/orgs/{orgId}/sites": {
+
+  "/auth-api/auth/orgs/users": {
+
   "post": {
-  "operationId": "createSite",
-  "summary": "Create site",
-  "description": "Create a site in an org",
-  "parameters": [
-  {
-  "name": "orgId",
-  "required": true,
-  "in": "path",
-  "example": "3c961901-bc77-4590-bbcc-56606665891d",
-  "description": "The Org ID",
-  "schema": {
-  "type": "string"
-  }
-  }
-  ],
+
+  "operationId": "createAdmin",
+
+  "summary": "createAdmin",
+
+  "description": "Creates an admin user",
+
+  "parameters": [],
+
   "requestBody": {
+
   "required": true,
+
   "content": {
+
   "application/json": {
+
   "schema": {
-  "$ref": "#/components/schemas/CreateSiteRequestDto"
+
+  "$ref": "#/components/schemas/CreateAdminRequestDto"
+
   }
+
   }
+
   }
+
   },
+
   "responses": {
+
   "200": {
+
   "description": ""
+
   },
+
   "202": {
+
   "description": "Accepted."
+
   },
+
   "204": {
+
   "description": "No Content."
+
   },
+
   "301": {
+
   "description": "Moved Permanently."
+
   },
+
   "302": {
+
   "description": "Found."
+
   },
+
   "400": {
+
   "description": "Bad request.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/BadRequestErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "401": {
+
   "description": "Unauthorized.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/UnauthorizedErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "403": {
+
   "description": "Forbidden.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/ForbiddenErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "404": {
+
   "description": "Resource not found.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/NotFoundErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "405": {
+
   "description": "Method not allowed."
+
   },
+
   "406": {
+
   "description": "Not acceptable."
+
   },
+
   "408": {
+
   "description": "Request timed out."
+
   },
+
   "409": {
+
   "description": "Conflict"
+
   },
+
   "410": {
+
   "description": "Gone"
+
   },
+
   "412": {
+
   "description": "Precondition Failed"
+
   },
+
   "413": {
+
   "description": "Payload Too Large"
+
   },
+
   "415": {
+
   "description": "Unsupported Media Type"
+
   },
+
   "422": {
+
   "description": "Unprocessable Entity"
+
   },
+
   "429": {
+
   "description": "Too many requests"
+
   },
+
   "500": {
+
   "description": "Internal server error.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/InternalServerErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "502": {
+
   "description": "Bad Gateway."
+
   },
+
   "503": {
+
   "description": "Service Unavailable."
+
   },
+
   "504": {
+
   "description": "Gateway Timeout."
+
   }
-  },
-  "security": [
-  {
-  "bearer": []
+
   }
-  ]
-  },
-  "get": {
-  "operationId": "getSites",
-  "summary": "Get sites",
-  "description": "Retreive sites in an org",
-  "parameters": [
-  {
-  "name": "orgId",
-  "required": true,
-  "in": "path",
-  "example": "3c961901-bc77-4590-bbcc-56606665891d",
-  "description": "The Org ID",
-  "schema": {
-  "type": "string"
+
   }
-  }
-  ],
-  "responses": {
-  "200": {
-  "description": ""
+
   },
-  "202": {
-  "description": "Accepted."
-  },
-  "204": {
-  "description": "No Content."
-  },
-  "301": {
-  "description": "Moved Permanently."
-  },
-  "302": {
-  "description": "Found."
-  },
-  "400": {
-  "description": "Bad request.",
-  "content": {
-  "application/json": {
-  "schema": {
-  "$ref": "#/components/schemas/BadRequestErrorResponseDto"
-  }
-  }
-  }
-  },
-  "401": {
-  "description": "Unauthorized.",
-  "content": {
-  "application/json": {
-  "schema": {
-  "$ref": "#/components/schemas/UnauthorizedErrorResponseDto"
-  }
-  }
-  }
-  },
-  "403": {
-  "description": "Forbidden.",
-  "content": {
-  "application/json": {
-  "schema": {
-  "$ref": "#/components/schemas/ForbiddenErrorResponseDto"
-  }
-  }
-  }
-  },
-  "404": {
-  "description": "Resource not found.",
-  "content": {
-  "application/json": {
-  "schema": {
-  "$ref": "#/components/schemas/NotFoundErrorResponseDto"
-  }
-  }
-  }
-  },
-  "405": {
-  "description": "Method not allowed."
-  },
-  "406": {
-  "description": "Not acceptable."
-  },
-  "408": {
-  "description": "Request timed out."
-  },
-  "409": {
-  "description": "Conflict"
-  },
-  "410": {
-  "description": "Gone"
-  },
-  "412": {
-  "description": "Precondition Failed"
-  },
-  "413": {
-  "description": "Payload Too Large"
-  },
-  "415": {
-  "description": "Unsupported Media Type"
-  },
-  "422": {
-  "description": "Unprocessable Entity"
-  },
-  "429": {
-  "description": "Too many requests"
-  },
-  "500": {
-  "description": "Internal server error.",
-  "content": {
-  "application/json": {
-  "schema": {
-  "$ref": "#/components/schemas/InternalServerErrorResponseDto"
-  }
-  }
-  }
-  },
-  "502": {
-  "description": "Bad Gateway."
-  },
-  "503": {
-  "description": "Service Unavailable."
-  },
-  "504": {
-  "description": "Gateway Timeout."
-  }
-  },
-  "security": [
-  {
-  "bearer": []
-  }
-  ]
-  }
-  },
-  "/orgs-api/orgs/{orgId}/sites/{siteId}": {
-  "patch": {
-  "operationId": "updateSite",
-  "summary": "Update site",
-  "description": "Update the fields of a site",
-  "parameters": [
-  {
-  "name": "orgId",
-  "required": true,
-  "in": "path",
-  "example": "3c961901-bc77-4590-bbcc-56606665891d",
-  "description": "The Org ID",
-  "schema": {
-  "type": "string"
-  }
-  },
-  {
-  "name": "siteId",
-  "required": true,
-  "in": "path",
-  "example": "3c961901-bc77-4590-bbcc-56606665891d",
-  "description": "The Org ID",
-  "schema": {
-  "type": "string"
-  }
-  }
-  ],
-  "requestBody": {
-  "required": true,
-  "content": {
-  "application/json": {
-  "schema": {
-  "$ref": "#/components/schemas/UpdateSiteRequestDto"
-  }
-  }
-  }
-  },
-  "responses": {
-  "200": {
-  "description": ""
-  },
-  "202": {
-  "description": "Accepted."
-  },
-  "204": {
-  "description": "No Content."
-  },
-  "301": {
-  "description": "Moved Permanently."
-  },
-  "302": {
-  "description": "Found."
-  },
-  "400": {
-  "description": "Bad request.",
-  "content": {
-  "application/json": {
-  "schema": {
-  "$ref": "#/components/schemas/BadRequestErrorResponseDto"
-  }
-  }
-  }
-  },
-  "401": {
-  "description": "Unauthorized.",
-  "content": {
-  "application/json": {
-  "schema": {
-  "$ref": "#/components/schemas/UnauthorizedErrorResponseDto"
-  }
-  }
-  }
-  },
-  "403": {
-  "description": "Forbidden.",
-  "content": {
-  "application/json": {
-  "schema": {
-  "$ref": "#/components/schemas/ForbiddenErrorResponseDto"
-  }
-  }
-  }
-  },
-  "404": {
-  "description": "Resource not found.",
-  "content": {
-  "application/json": {
-  "schema": {
-  "$ref": "#/components/schemas/NotFoundErrorResponseDto"
-  }
-  }
-  }
-  },
-  "405": {
-  "description": "Method not allowed."
-  },
-  "406": {
-  "description": "Not acceptable."
-  },
-  "408": {
-  "description": "Request timed out."
-  },
-  "409": {
-  "description": "Conflict"
-  },
-  "410": {
-  "description": "Gone"
-  },
-  "412": {
-  "description": "Precondition Failed"
-  },
-  "413": {
-  "description": "Payload Too Large"
-  },
-  "415": {
-  "description": "Unsupported Media Type"
-  },
-  "422": {
-  "description": "Unprocessable Entity"
-  },
-  "429": {
-  "description": "Too many requests"
-  },
-  "500": {
-  "description": "Internal server error.",
-  "content": {
-  "application/json": {
-  "schema": {
-  "$ref": "#/components/schemas/InternalServerErrorResponseDto"
-  }
-  }
-  }
-  },
-  "502": {
-  "description": "Bad Gateway."
-  },
-  "503": {
-  "description": "Service Unavailable."
-  },
-  "504": {
-  "description": "Gateway Timeout."
-  }
-  },
-  "security": [
-  {
-  "bearer": []
-  }
-  ]
-  }
-  },
-  "/orgs-api/orgs/{orgId}/sites/{siteId}/units": {
+
+  "/auth-api/auth/orgs/users/confirm": {
+
   "post": {
-  "operationId": "createUnit",
-  "summary": "Create Unit",
-  "description": "Create a unit for a site",
-  "parameters": [
-  {
-  "name": "orgId",
-  "required": true,
-  "in": "path",
-  "example": "3c961901-bc77-4590-bbcc-56606665891d",
-  "description": "The orgId ID",
-  "schema": {
-  "type": "string"
-  }
-  },
-  {
-  "name": "siteId",
-  "required": true,
-  "in": "path",
-  "example": "3c961901-bc77-4590-bbcc-56606665891d",
-  "description": "The site ID",
-  "schema": {
-  "type": "string"
-  }
-  }
-  ],
+
+  "operationId": "confirmAdminSignUp",
+
+  "summary": "confrimAdminSignup",
+
+  "description": "TBD",
+
+  "parameters": [],
+
   "requestBody": {
+
   "required": true,
+
   "content": {
+
   "application/json": {
+
   "schema": {
-  "$ref": "#/components/schemas/CreateUnitRequestDto"
+
+  "$ref": "#/components/schemas/ConfirmSignUpRequestDto"
+
   }
+
   }
+
   }
+
   },
+
   "responses": {
+
   "200": {
+
   "description": ""
+
   },
+
   "202": {
+
   "description": "Accepted."
+
   },
+
   "204": {
+
   "description": "No Content."
+
   },
+
   "301": {
+
   "description": "Moved Permanently."
+
   },
+
   "302": {
+
   "description": "Found."
+
   },
+
   "400": {
+
   "description": "Bad request.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/BadRequestErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "401": {
+
   "description": "Unauthorized.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/UnauthorizedErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "403": {
+
   "description": "Forbidden.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/ForbiddenErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "404": {
+
   "description": "Resource not found.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/NotFoundErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "405": {
+
   "description": "Method not allowed."
+
   },
+
   "406": {
+
   "description": "Not acceptable."
+
   },
+
   "408": {
+
   "description": "Request timed out."
+
   },
+
   "409": {
+
   "description": "Conflict"
+
   },
+
   "410": {
+
   "description": "Gone"
+
   },
+
   "412": {
+
   "description": "Precondition Failed"
+
   },
+
   "413": {
+
   "description": "Payload Too Large"
+
   },
+
   "415": {
+
   "description": "Unsupported Media Type"
+
   },
+
   "422": {
+
   "description": "Unprocessable Entity"
+
   },
+
   "429": {
+
   "description": "Too many requests"
+
   },
+
   "500": {
+
   "description": "Internal server error.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/InternalServerErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "502": {
+
   "description": "Bad Gateway."
+
   },
+
   "503": {
+
   "description": "Service Unavailable."
+
   },
+
   "504": {
+
   "description": "Gateway Timeout."
+
   }
+
+  }
+
+  }
+
   },
-  "security": [
-  {
-  "bearer": []
-  }
-  ]
-  }
-  },
-  "/orgs-api/orgs/{orgId}/sites/{siteId}/units/{unitId}": {
-  "put": {
-  "operationId": "update",
-  "summary": "Update Unit",
-  "description": "Update a unit",
+
+  "/auth-api/auth/orgs/{orgId}/users": {
+
+  "post": {
+
+  "operationId": "createUsers",
+
+  "summary": "createUsers",
+
+  "description": "Creates an orgUsers programmatically.",
+
   "parameters": [
+
   {
+
   "name": "orgId",
+
   "required": true,
+
   "in": "path",
-  "example": "3c961901-bc77-4590-bbcc-56606665891d",
-  "description": "The orgId ID",
+
   "schema": {
+
   "type": "string"
+
   }
-  },
-  {
-  "name": "siteId",
-  "required": true,
-  "in": "path",
-  "example": "3c961901-bc77-4590-bbcc-56606665891d",
-  "description": "The site ID",
-  "schema": {
-  "type": "string"
+
   }
-  },
-  {
-  "name": "unitId",
-  "required": true,
-  "in": "path",
-  "example": "3c961901-bc77-4590-bbcc-56606665891d",
-  "description": "The unit ID",
-  "schema": {
-  "type": "string"
-  }
-  }
+
   ],
+
   "requestBody": {
+
   "required": true,
+
   "content": {
+
   "application/json": {
+
   "schema": {
-  "$ref": "#/components/schemas/UpdateUnitRequestDto"
+
+  "$ref": "#/components/schemas/OrgAdminCreateUsersRequestDto"
+
   }
+
   }
+
   }
+
   },
+
   "responses": {
+
   "200": {
+
   "description": ""
+
   },
+
   "202": {
+
   "description": "Accepted."
+
   },
+
   "204": {
+
   "description": "No Content."
+
   },
+
   "301": {
+
   "description": "Moved Permanently."
+
   },
+
   "302": {
+
   "description": "Found."
+
   },
+
   "400": {
+
   "description": "Bad request.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/BadRequestErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "401": {
+
   "description": "Unauthorized.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/UnauthorizedErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "403": {
+
   "description": "Forbidden.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/ForbiddenErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "404": {
+
   "description": "Resource not found.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/NotFoundErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "405": {
+
   "description": "Method not allowed."
+
   },
+
   "406": {
+
   "description": "Not acceptable."
+
   },
+
   "408": {
+
   "description": "Request timed out."
+
   },
+
   "409": {
+
   "description": "Conflict"
+
   },
+
   "410": {
+
   "description": "Gone"
+
   },
+
   "412": {
+
   "description": "Precondition Failed"
+
   },
+
   "413": {
+
   "description": "Payload Too Large"
+
   },
+
   "415": {
+
   "description": "Unsupported Media Type"
+
   },
+
   "422": {
+
   "description": "Unprocessable Entity"
+
   },
+
   "429": {
+
   "description": "Too many requests"
+
   },
+
   "500": {
+
   "description": "Internal server error.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/InternalServerErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "502": {
+
   "description": "Bad Gateway."
+
   },
+
   "503": {
+
   "description": "Service Unavailable."
+
   },
+
   "504": {
+
   "description": "Gateway Timeout."
+
   }
+
   },
+
   "security": [
+
   {
+
   "bearer": []
+
   }
+
   ]
+
   }
+
   },
-  "/orgs-api/orgs/{orgId}/users/{userId}": {
-  "patch": {
-  "operationId": "updateUser",
-  "summary": "update user",
-  "description": "Updates a user",
+
+  "/auth-api/auth/orgs/{orgId}/users/confirm": {
+
+  "post": {
+
+  "operationId": "confirmUserSignUp",
+
+  "summary": "confirmUserSignUp",
+
+  "description": "TBD",
+
   "parameters": [
+
   {
-  "name": "userId",
-  "required": true,
-  "in": "path",
-  "example": "3c961901-bc77-4590-bbcc-56606665891d",
-  "description": "The User ID",
-  "schema": {
-  "type": "string"
-  }
-  },
-  {
+
   "name": "orgId",
+
   "required": true,
+
   "in": "path",
-  "example": "3c961901-bc77-4590-bbcc-56606665891d",
-  "description": "The Org ID",
+
   "schema": {
+
   "type": "string"
+
   }
+
   }
+
   ],
+
   "requestBody": {
+
   "required": true,
+
   "content": {
+
   "application/json": {
+
   "schema": {
-  "$ref": "#/components/schemas/UpdateUserRequestDto"
+
+  "$ref": "#/components/schemas/ConfirmSignUpRequestDto"
+
   }
+
   }
+
   }
+
   },
+
   "responses": {
+
   "200": {
+
   "description": ""
+
   },
+
   "202": {
+
   "description": "Accepted."
+
   },
+
   "204": {
+
   "description": "No Content."
+
   },
+
   "301": {
+
   "description": "Moved Permanently."
+
   },
+
   "302": {
+
   "description": "Found."
+
   },
+
   "400": {
+
   "description": "Bad request.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/BadRequestErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "401": {
+
   "description": "Unauthorized.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/UnauthorizedErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "403": {
+
   "description": "Forbidden.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/ForbiddenErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "404": {
+
   "description": "Resource not found.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/NotFoundErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "405": {
+
   "description": "Method not allowed."
+
   },
+
   "406": {
+
   "description": "Not acceptable."
+
   },
+
   "408": {
+
   "description": "Request timed out."
+
   },
+
   "409": {
+
   "description": "Conflict"
+
   },
+
   "410": {
+
   "description": "Gone"
+
   },
+
   "412": {
+
   "description": "Precondition Failed"
+
   },
+
   "413": {
+
   "description": "Payload Too Large"
+
   },
+
   "415": {
+
   "description": "Unsupported Media Type"
+
   },
+
   "422": {
+
   "description": "Unprocessable Entity"
+
   },
+
   "429": {
+
   "description": "Too many requests"
+
   },
+
   "500": {
+
   "description": "Internal server error.",
+
   "content": {
+
   "application/json": {
+
   "schema": {
+
   "$ref": "#/components/schemas/InternalServerErrorResponseDto"
+
   }
+
   }
+
   }
+
   },
+
   "502": {
+
   "description": "Bad Gateway."
+
   },
+
   "503": {
+
   "description": "Service Unavailable."
+
   },
+
   "504": {
+
   "description": "Gateway Timeout."
+
   }
+
+  }
+
+  }
+
   },
-  "security": [
-  {
-  "bearer": []
+
+  "/auth-api/auth/resend-verification": {
+
+  "post": {
+
+  "operationId": "resendVerification",
+
+  "summary": "Resend verification code",
+
+  "description": "TBD",
+
+  "parameters": [],
+
+  "requestBody": {
+
+  "required": true,
+
+  "content": {
+
+  "application/json": {
+
+  "schema": {
+
+  "$ref": "#/components/schemas/EmailRequestDto"
+
   }
-  ]
+
   }
+
   }
+
   },
+
+  "responses": {
+
+  "200": {
+
+  "description": ""
+
+  },
+
+  "202": {
+
+  "description": "Accepted."
+
+  },
+
+  "204": {
+
+  "description": "No Content."
+
+  },
+
+  "301": {
+
+  "description": "Moved Permanently."
+
+  },
+
+  "302": {
+
+  "description": "Found."
+
+  },
+
+  "400": {
+
+  "description": "Bad request.",
+
+  "content": {
+
+  "application/json": {
+
+  "schema": {
+
+  "$ref": "#/components/schemas/BadRequestErrorResponseDto"
+
+  }
+
+  }
+
+  }
+
+  },
+
+  "401": {
+
+  "description": "Unauthorized.",
+
+  "content": {
+
+  "application/json": {
+
+  "schema": {
+
+  "$ref": "#/components/schemas/UnauthorizedErrorResponseDto"
+
+  }
+
+  }
+
+  }
+
+  },
+
+  "403": {
+
+  "description": "Forbidden.",
+
+  "content": {
+
+  "application/json": {
+
+  "schema": {
+
+  "$ref": "#/components/schemas/ForbiddenErrorResponseDto"
+
+  }
+
+  }
+
+  }
+
+  },
+
+  "404": {
+
+  "description": "Resource not found.",
+
+  "content": {
+
+  "application/json": {
+
+  "schema": {
+
+  "$ref": "#/components/schemas/NotFoundErrorResponseDto"
+
+  }
+
+  }
+
+  }
+
+  },
+
+  "405": {
+
+  "description": "Method not allowed."
+
+  },
+
+  "406": {
+
+  "description": "Not acceptable."
+
+  },
+
+  "408": {
+
+  "description": "Request timed out."
+
+  },
+
+  "409": {
+
+  "description": "Conflict"
+
+  },
+
+  "410": {
+
+  "description": "Gone"
+
+  },
+
+  "412": {
+
+  "description": "Precondition Failed"
+
+  },
+
+  "413": {
+
+  "description": "Payload Too Large"
+
+  },
+
+  "415": {
+
+  "description": "Unsupported Media Type"
+
+  },
+
+  "422": {
+
+  "description": "Unprocessable Entity"
+
+  },
+
+  "429": {
+
+  "description": "Too many requests"
+
+  },
+
+  "500": {
+
+  "description": "Internal server error.",
+
+  "content": {
+
+  "application/json": {
+
+  "schema": {
+
+  "$ref": "#/components/schemas/InternalServerErrorResponseDto"
+
+  }
+
+  }
+
+  }
+
+  },
+
+  "502": {
+
+  "description": "Bad Gateway."
+
+  },
+
+  "503": {
+
+  "description": "Service Unavailable."
+
+  },
+
+  "504": {
+
+  "description": "Gateway Timeout."
+
+  }
+
+  }
+
+  }
+
+  },
+
+  "/auth-api/auth/password/reset": {
+
+  "post": {
+
+  "operationId": "resetPassword",
+
+  "summary": "Initiates a flow to reset password",
+
+  "description": "TBD",
+
+  "parameters": [],
+
+  "requestBody": {
+
+  "required": true,
+
+  "content": {
+
+  "application/json": {
+
+  "schema": {
+
+  "$ref": "#/components/schemas/ResetPasswordRequestDto"
+
+  }
+
+  }
+
+  }
+
+  },
+
+  "responses": {
+
+  "200": {
+
+  "description": ""
+
+  },
+
+  "202": {
+
+  "description": "Accepted."
+
+  },
+
+  "204": {
+
+  "description": "No Content."
+
+  },
+
+  "301": {
+
+  "description": "Moved Permanently."
+
+  },
+
+  "302": {
+
+  "description": "Found."
+
+  },
+
+  "400": {
+
+  "description": "Bad request.",
+
+  "content": {
+
+  "application/json": {
+
+  "schema": {
+
+  "$ref": "#/components/schemas/BadRequestErrorResponseDto"
+
+  }
+
+  }
+
+  }
+
+  },
+
+  "401": {
+
+  "description": "Unauthorized.",
+
+  "content": {
+
+  "application/json": {
+
+  "schema": {
+
+  "$ref": "#/components/schemas/UnauthorizedErrorResponseDto"
+
+  }
+
+  }
+
+  }
+
+  },
+
+  "403": {
+
+  "description": "Forbidden.",
+
+  "content": {
+
+  "application/json": {
+
+  "schema": {
+
+  "$ref": "#/components/schemas/ForbiddenErrorResponseDto"
+
+  }
+
+  }
+
+  }
+
+  },
+
+  "404": {
+
+  "description": "Resource not found.",
+
+  "content": {
+
+  "application/json": {
+
+  "schema": {
+
+  "$ref": "#/components/schemas/NotFoundErrorResponseDto"
+
+  }
+
+  }
+
+  }
+
+  },
+
+  "405": {
+
+  "description": "Method not allowed."
+
+  },
+
+  "406": {
+
+  "description": "Not acceptable."
+
+  },
+
+  "408": {
+
+  "description": "Request timed out."
+
+  },
+
+  "409": {
+
+  "description": "Conflict"
+
+  },
+
+  "410": {
+
+  "description": "Gone"
+
+  },
+
+  "412": {
+
+  "description": "Precondition Failed"
+
+  },
+
+  "413": {
+
+  "description": "Payload Too Large"
+
+  },
+
+  "415": {
+
+  "description": "Unsupported Media Type"
+
+  },
+
+  "422": {
+
+  "description": "Unprocessable Entity"
+
+  },
+
+  "429": {
+
+  "description": "Too many requests"
+
+  },
+
+  "500": {
+
+  "description": "Internal server error.",
+
+  "content": {
+
+  "application/json": {
+
+  "schema": {
+
+  "$ref": "#/components/schemas/InternalServerErrorResponseDto"
+
+  }
+
+  }
+
+  }
+
+  },
+
+  "502": {
+
+  "description": "Bad Gateway."
+
+  },
+
+  "503": {
+
+  "description": "Service Unavailable."
+
+  },
+
+  "504": {
+
+  "description": "Gateway Timeout."
+
+  }
+
+  }
+
+  }
+
+  },
+
+  "/auth-api/auth/password/confirm": {
+
+  "post": {
+
+  "operationId": "confirmPasswordReset",
+
+  "summary": "Confirm reset password",
+
+  "description": "TBD",
+
+  "parameters": [],
+
+  "requestBody": {
+
+  "required": true,
+
+  "content": {
+
+  "application/json": {
+
+  "schema": {
+
+  "$ref": "#/components/schemas/ConfirmPasswordResetRequestDto"
+
+  }
+
+  }
+
+  }
+
+  },
+
+  "responses": {
+
+  "200": {
+
+  "description": ""
+
+  },
+
+  "202": {
+
+  "description": "Accepted."
+
+  },
+
+  "204": {
+
+  "description": "No Content."
+
+  },
+
+  "301": {
+
+  "description": "Moved Permanently."
+
+  },
+
+  "302": {
+
+  "description": "Found."
+
+  },
+
+  "400": {
+
+  "description": "Bad request.",
+
+  "content": {
+
+  "application/json": {
+
+  "schema": {
+
+  "$ref": "#/components/schemas/BadRequestErrorResponseDto"
+
+  }
+
+  }
+
+  }
+
+  },
+
+  "401": {
+
+  "description": "Unauthorized.",
+
+  "content": {
+
+  "application/json": {
+
+  "schema": {
+
+  "$ref": "#/components/schemas/UnauthorizedErrorResponseDto"
+
+  }
+
+  }
+
+  }
+
+  },
+
+  "403": {
+
+  "description": "Forbidden.",
+
+  "content": {
+
+  "application/json": {
+
+  "schema": {
+
+  "$ref": "#/components/schemas/ForbiddenErrorResponseDto"
+
+  }
+
+  }
+
+  }
+
+  },
+
+  "404": {
+
+  "description": "Resource not found.",
+
+  "content": {
+
+  "application/json": {
+
+  "schema": {
+
+  "$ref": "#/components/schemas/NotFoundErrorResponseDto"
+
+  }
+
+  }
+
+  }
+
+  },
+
+  "405": {
+
+  "description": "Method not allowed."
+
+  },
+
+  "406": {
+
+  "description": "Not acceptable."
+
+  },
+
+  "408": {
+
+  "description": "Request timed out."
+
+  },
+
+  "409": {
+
+  "description": "Conflict"
+
+  },
+
+  "410": {
+
+  "description": "Gone"
+
+  },
+
+  "412": {
+
+  "description": "Precondition Failed"
+
+  },
+
+  "413": {
+
+  "description": "Payload Too Large"
+
+  },
+
+  "415": {
+
+  "description": "Unsupported Media Type"
+
+  },
+
+  "422": {
+
+  "description": "Unprocessable Entity"
+
+  },
+
+  "429": {
+
+  "description": "Too many requests"
+
+  },
+
+  "500": {
+
+  "description": "Internal server error.",
+
+  "content": {
+
+  "application/json": {
+
+  "schema": {
+
+  "$ref": "#/components/schemas/InternalServerErrorResponseDto"
+
+  }
+
+  }
+
+  }
+
+  },
+
+  "502": {
+
+  "description": "Bad Gateway."
+
+  },
+
+  "503": {
+
+  "description": "Service Unavailable."
+
+  },
+
+  "504": {
+
+  "description": "Gateway Timeout."
+
+  }
+
+  }
+
+  }
+
+  }
+
+  },
+
   "info": {
-  "title": "ManageSpace Orgs API",
-  "description": "ManageSpace Orgs API Documentation",
+
+  "title": "ManageSpace Auth API",
+
+  "description": "ManageSpace Auth API Documentation",
+
   "version": "1.0",
+
   "contact": {}
+
   },
+
   "tags": [],
+
   "servers": [],
+
   "components": {
+
   "schemas": {
+
   "BaseError": {
+
   "type": "object",
+
   "properties": {
+
   "message": {
+
   "type": "string",
+
   "readOnly": true,
+
   "example": "This is a message describes the errors caught"
+
   },
+
   "code": {
+
   "type": "string",
+
   "readOnly": true,
+
   "example": "This is a error code."
+
   }
+
   },
+
   "required": [
+
   "message",
+
   "code"
+
   ]
+
   },
+
   "BadRequestErrorResponseDto": {
+
   "type": "object",
+
   "properties": {
+
   "data": {
+
   "readOnly": true,
+
   "example": [],
+
   "type": "array",
+
   "items": {
+
   "type": "string"
+
   }
+
   },
+
   "success": {
+
   "type": "boolean",
+
   "readOnly": true,
+
   "example": false
+
   },
+
   "error": {
+
   "readOnly": true,
+
   "example": {
+
   "message": "Encountered 1 validation errors - {error-message}",
+
   "code": "INVALID_PARAM"
+
   },
+
   "allOf": [
+
   {
+
   "$ref": "#/components/schemas/BaseError"
+
   }
+
   ]
+
   }
+
   },
+
   "required": [
+
   "data",
+
   "success",
+
   "error"
+
   ]
+
   },
+
   "UnauthorizedErrorResponseDto": {
+
   "type": "object",
+
   "properties": {
+
   "data": {
+
   "readOnly": true,
+
   "example": [],
+
   "type": "array",
+
   "items": {
+
   "type": "string"
+
   }
+
   },
+
   "success": {
+
   "type": "boolean",
+
   "readOnly": true,
+
   "example": false
+
   },
+
   "error": {
+
   "readOnly": true,
+
   "example": {
+
   "message": "Unauthorized",
+
   "code": "UNAUTHORIZED"
+
   },
+
   "allOf": [
+
   {
+
   "$ref": "#/components/schemas/BaseError"
+
   }
+
   ]
+
   }
+
   },
+
   "required": [
+
   "data",
+
   "success",
+
   "error"
+
   ]
+
   },
+
   "ForbiddenErrorResponseDto": {
+
   "type": "object",
+
   "properties": {
+
   "data": {
+
   "readOnly": true,
+
   "example": [],
+
   "type": "array",
+
   "items": {
+
   "type": "string"
+
   }
+
   },
+
   "success": {
+
   "type": "boolean",
+
   "readOnly": true,
+
   "example": false
+
   },
+
   "error": {
+
   "readOnly": true,
+
   "example": {
+
   "message": "Access Forbidden",
+
   "code": "FORBIDDEN"
+
   },
+
   "allOf": [
+
   {
+
   "$ref": "#/components/schemas/BaseError"
+
   }
+
   ]
+
   }
+
   },
+
   "required": [
+
   "data",
+
   "success",
+
   "error"
+
   ]
+
   },
+
   "NotFoundErrorResponseDto": {
+
   "type": "object",
+
   "properties": {
+
   "data": {
+
   "readOnly": true,
+
   "example": [],
+
   "type": "array",
+
   "items": {
+
   "type": "string"
+
   }
+
   },
+
   "success": {
+
   "type": "boolean",
+
   "readOnly": true,
+
   "example": false
+
   },
+
   "error": {
+
   "readOnly": true,
+
   "example": {
+
   "message": "Resource not found.",
+
   "code": "RESOURCE_NOT_FOUND"
+
   },
+
   "allOf": [
+
   {
+
   "$ref": "#/components/schemas/BaseError"
+
   }
+
   ]
+
   }
+
   },
+
   "required": [
+
   "data",
+
   "success",
+
   "error"
+
   ]
+
   },
+
   "InternalServerErrorResponseDto": {
+
   "type": "object",
+
   "properties": {
+
   "data": {
+
   "readOnly": true,
+
   "example": [],
+
   "type": "array",
+
   "items": {
+
   "type": "string"
+
   }
+
   },
+
   "success": {
+
   "type": "boolean",
+
   "readOnly": true,
+
   "example": false
+
   },
+
   "error": {
+
   "readOnly": true,
+
   "example": {
+
   "message": "Internal Server Error",
+
   "code": "INTERNAL_ERROR"
+
   },
+
   "allOf": [
+
   {
+
   "$ref": "#/components/schemas/BaseError"
+
   }
+
   ]
+
   }
+
   },
+
   "required": [
+
   "data",
+
   "success",
+
   "error"
+
   ]
+
   },
-  "CreateOrgRequestDto": {
+
+  "LoginUserRequestDto": {
+
   "type": "object",
+
   "properties": {
-  "orgName": {
-  "type": "string",
-  "example": "Morning Star",
-  "description": "Org name"
-  },
-  "orgDescription": {
-  "type": "string",
-  "example": "Self storage facility with climate controlled units",
-  "description": "Org description"
-  }
-  },
-  "required": [
-  "orgName",
-  "orgDescription"
-  ]
-  },
-  "UpdateOrgRequestDto": {
-  "type": "object",
-  "properties": {
-  "orgId": {
-  "type": "string",
-  "example": "fe26693b-a4f6-4e4a-9bfd-179dbc77a81",
-  "description": "Org ID"
-  }
-  },
-  "required": [
-  "orgId"
-  ]
-  },
-  "CreateSiteRequestDto": {
-  "type": "object",
-  "properties": {
-  "siteName": {
-  "type": "string",
-  "example": "Willoughby Cubes",
-  "description": "Name"
-  },
-  "siteTypeIds": {
-  "example": [
-  "1"
-  ],
-  "description": "Site Type ID",
-  "type": "array",
-  "items": {
-  "type": "string"
-  }
-  }
-  },
-  "required": [
-  "siteName",
-  "siteTypeIds"
-  ]
-  },
-  "UpdateSiteRequestDto": {
-  "type": "object",
-  "properties": {
-  "siteName": {
-  "type": "string",
-  "example": "Willoughby Cubes",
-  "description": "Name"
-  },
-  "siteTypeIds": {
-  "example": [
-  "1"
-  ],
-  "description": "Site Type ID",
-  "type": "array",
-  "items": {
-  "type": "string"
-  }
-  }
-  }
-  },
-  "CreateUnitRequestDto": {
-  "type": "object",
-  "properties": {
-  "unitName": {
-  "type": "string",
-  "example": "SS-01",
-  "description": "Unit Name"
-  },
-  "unitDescription": {
-  "type": "string",
-  "example": "An inside unit with air conditioning.",
-  "description": "Unit Description",
-  "nullable": true
-  },
-  "siteId": {
-  "type": "string",
-  "example": "fe26693b-a4f6-4e4a-9bfd-179dbc77a81",
-  "description": "Site ID"
-  },
-  "unitTypeId": {
-  "type": "number",
-  "example": 1,
-  "description": "Unit Type ID"
-  },
-  "statusId": {
-  "type": "number",
-  "example": 1,
-  "description": "Status"
-  },
-  "length": {
-  "type": "number",
-  "example": 1,
-  "description": "Length"
-  },
-  "width": {
-  "type": "number",
-  "example": 1,
-  "description": "Width"
-  },
-  "height": {
-  "type": "number",
-  "example": 1,
-  "description": "Height",
-  "nullable": true
-  },
-  "size": {
-  "type": "number",
-  "example": 1,
-  "description": "Size",
-  "nullable": true
-  },
-  "metricId": {
-  "type": "number",
-  "example": 1,
-  "description": "Metric"
-  },
-  "standardPrice": {
-  "type": "number",
-  "example": 1,
-  "description": "Standard Price",
-  "nullable": true
-  },
-  "tax": {
-  "type": "number",
-  "example": 1,
-  "description": "Tax",
-  "nullable": true
-  },
-  "unitSecurityDeposit": {
-  "type": "number",
-  "example": 1,
-  "description": "Security Deposit",
-  "nullable": true
-  },
-  "walkThroughOrder": {
-  "type": "number",
-  "example": 1,
-  "description": "Walk through order",
-  "nullable": true
-  },
-  "building": {
-  "type": "string",
-  "example": "1",
-  "description": "Building",
-  "nullable": true
-  },
-  "currencyId": {
-  "type": "number",
-  "example": 1,
-  "description": "Currency",
-  "nullable": true
-  },
-  "floor": {
-  "type": "number",
-  "example": 1,
-  "description": "floor",
-  "nullable": true
-  },
-  "climateControlled": {
-  "type": "boolean",
-  "example": true,
-  "description": "Climate Controlled",
-  "nullable": true
-  },
-  "power": {
-  "type": "boolean",
-  "example": true,
-  "description": "Power",
-  "nullable": true
-  },
-  "alarm": {
-  "type": "boolean",
-  "example": true,
-  "description": "Alarm",
-  "nullable": true
-  },
-  "insideUnit": {
-  "type": "boolean",
-  "example": true,
-  "description": "Inside Unit",
-  "nullable": true
-  },
-  "notes": {
-  "type": "string",
-  "example": "Example not about the unit",
-  "description": "Inside Unit",
-  "nullable": true
-  }
-  },
-  "required": [
-  "unitName",
-  "unitDescription",
-  "siteId",
-  "unitTypeId",
-  "statusId",
-  "length",
-  "width",
-  "height",
-  "size",
-  "metricId",
-  "standardPrice",
-  "tax",
-  "unitSecurityDeposit",
-  "walkThroughOrder",
-  "building",
-  "currencyId",
-  "floor",
-  "climateControlled",
-  "power",
-  "alarm",
-  "insideUnit",
-  "notes"
-  ]
-  },
-  "UpdateUnitRequestDto": {
-  "type": "object",
-  "properties": {
-  "unitName": {
-  "type": "string",
-  "example": "SS-01",
-  "description": "Unit Name"
-  },
-  "unitDescription": {
-  "type": "string",
-  "example": "An inside unit with air conditioning.",
-  "description": "Unit Description",
-  "nullable": true
-  },
-  "siteId": {
-  "type": "string",
-  "example": "fe26693b-a4f6-4e4a-9bfd-179dbc77a81",
-  "description": "Site ID"
-  },
-  "unitTypeId": {
-  "type": "number",
-  "example": 1,
-  "description": "Unit Type ID"
-  },
-  "statusId": {
-  "type": "number",
-  "example": 1,
-  "description": "Status"
-  },
-  "length": {
-  "type": "number",
-  "example": 1,
-  "description": "Length"
-  },
-  "width": {
-  "type": "number",
-  "example": 1,
-  "description": "Width"
-  },
-  "height": {
-  "type": "number",
-  "example": 1,
-  "description": "Height",
-  "nullable": true
-  },
-  "size": {
-  "type": "number",
-  "example": 1,
-  "description": "Size",
-  "nullable": true
-  },
-  "metricId": {
-  "type": "number",
-  "example": 1,
-  "description": "Metric"
-  },
-  "standardPrice": {
-  "type": "number",
-  "example": 1,
-  "description": "Standard Price",
-  "nullable": true
-  },
-  "tax": {
-  "type": "number",
-  "example": 1,
-  "description": "Tax",
-  "nullable": true
-  },
-  "unitSecurityDeposit": {
-  "type": "number",
-  "example": 1,
-  "description": "Security Deposit",
-  "nullable": true
-  },
-  "walkThroughOrder": {
-  "type": "number",
-  "example": 1,
-  "description": "Walk through order",
-  "nullable": true
-  },
-  "building": {
-  "type": "string",
-  "example": "1",
-  "description": "Building",
-  "nullable": true
-  },
-  "currencyId": {
-  "type": "number",
-  "example": 1,
-  "description": "Currency",
-  "nullable": true
-  },
-  "floor": {
-  "type": "number",
-  "example": 1,
-  "description": "floor",
-  "nullable": true
-  },
-  "climateControlled": {
-  "type": "boolean",
-  "example": true,
-  "description": "Climate Controlled",
-  "nullable": true
-  },
-  "power": {
-  "type": "boolean",
-  "example": true,
-  "description": "Power",
-  "nullable": true
-  },
-  "alarm": {
-  "type": "boolean",
-  "example": true,
-  "description": "Alarm",
-  "nullable": true
-  },
-  "insideUnit": {
-  "type": "boolean",
-  "example": true,
-  "description": "Inside Unit",
-  "nullable": true
-  },
-  "notes": {
-  "type": "string",
-  "example": "Example not about the unit",
-  "description": "Inside Unit",
-  "nullable": true
-  }
-  },
-  "required": [
-  "unitName",
-  "unitDescription",
-  "siteId",
-  "unitTypeId",
-  "statusId",
-  "length",
-  "width",
-  "height",
-  "size",
-  "metricId",
-  "standardPrice",
-  "tax",
-  "unitSecurityDeposit",
-  "walkThroughOrder",
-  "building",
-  "currencyId",
-  "floor",
-  "climateControlled",
-  "power",
-  "alarm",
-  "insideUnit",
-  "notes"
-  ]
-  },
-  "UpdateUserRequestDto": {
-  "type": "object",
-  "properties": {
-  "userEmail": {
-  "type": "string",
-  "example": "test123@unionrealtime.com",
-  "description": "A valid email."
-  },
-  "firstName": {
-  "type": "string",
-  "example": "Jason",
-  "description": "User first name"
-  },
-  "middleName": {
-  "type": "string",
-  "example": "Grubble",
-  "description": "User last name"
-  },
-  "lastName": {
-  "type": "string",
-  "example": "Grubble",
-  "description": "User last name"
-  }
-  },
-  "required": [
-  "userEmail",
-  "firstName",
-  "lastName"
-  ]
-  },
-  "CreateUserConfirmedRequestDto": {
-  "type": "object",
-  "properties": {
-  "userId": {
-  "type": "string",
-  "example": "fe26693b-a4f6-4e4a-9bfd-179dbc77a81",
-  "description": "User ID"
-  },
-  "createdBy": {
-  "type": "string",
-  "example": "fe26693b-a4f6-4e4a-9bfd-179dbc77a81",
-  "description": "User ID"
-  },
-  "updatedBy": {
-  "type": "string",
-  "example": "fe26693b-a4f6-4e4a-9bfd-179dbc77a81",
-  "description": "User ID"
-  },
-  "orgId": {
-  "type": "string",
-  "example": "fe26693b-a4f6-4e4a-9bfd-179dbc77a81",
-  "description": "Org ID"
-  },
-  "firstName": {
-  "type": "string",
-  "example": "Jason",
-  "description": "User first name"
-  },
-  "lastName": {
-  "type": "string",
-  "example": "Grubble",
-  "description": "User last name"
-  },
+
   "email": {
+
   "type": "string",
-  "example": "jason@example.com",
-  "description": "User email"
-  }
-  },
-  "required": [
-  "userId",
-  "createdBy",
-  "updatedBy",
-  "orgId",
-  "firstName",
-  "lastName",
-  "email"
-  ]
-  },
-  "UpdateUserEventRequestDto": {
-  "type": "object",
-  "properties": {
-  "userId": {
-  "type": "string",
-  "example": "fe26693b-a4f6-4e4a-9bfd-179dbc77a81",
-  "description": "User ID"
-  },
-  "email": {
-  "type": "string",
+
   "example": "test123@unionrealtime.com",
+
   "description": "A valid email."
+
   },
-  "firstName": {
+
+  "password": {
+
   "type": "string",
-  "example": "Jason",
-  "description": "User first name"
+
+  "example": "Testpass123",
+
+  "description": "current password."
+
   },
-  "middleName": {
+
+  "newPassword": {
+
   "type": "string",
-  "example": "Grubble",
-  "description": "User last name"
-  },
-  "lastName": {
-  "type": "string",
-  "example": "Grubble",
-  "description": "User last name"
+
+  "example": "Testpass1234",
+
+  "description": "new password(this is an optional argument needed when user was created by an another user that has idOrgAdmin)"
+
   }
+
   },
+
   "required": [
-  "userId",
+
   "email",
-  "firstName",
-  "lastName"
+
+  "password"
+
   ]
+
   },
-  "UnitSubscriptionCreatedUpdatedRequestDto": {
+
+  "LogoutUserRequestDto": {
+
   "type": "object",
-  "properties": {}
+
+  "properties": {
+
+  "userId": {
+
+  "type": "string",
+
+  "example": "test-user-id-01",
+
+  "description": "A user id."
+
   }
+
+  },
+
+  "required": [
+
+  "userId"
+
+  ]
+
+  },
+
+  "CreateAdminRequestDto": {
+
+  "type": "object",
+
+  "properties": {
+
+  "firstName": {
+
+  "type": "string",
+
+  "example": "Jason",
+
+  "description": "User first name"
+
+  },
+
+  "lastName": {
+
+  "type": "string",
+
+  "example": "Grubble",
+
+  "description": "User last name"
+
+  },
+
+  "email": {
+
+  "type": "string",
+
+  "example": "jason@example.com",
+
+  "description": "User email"
+
+  },
+
+  "password": {
+
+  "type": "string",
+
+  "example": "Test1234",
+
+  "description": "Password"
+
   }
+
+  },
+
+  "required": [
+
+  "firstName",
+
+  "lastName",
+
+  "email",
+
+  "password"
+
+  ]
+
+  },
+
+  "ConfirmSignUpRequestDto": {
+
+  "type": "object",
+
+  "properties": {
+
+  "email": {
+
+  "type": "string",
+
+  "example": "test123@unionrealtime.com",
+
+  "description": "A valid email."
+
+  },
+
+  "code": {
+
+  "type": "string",
+
+  "example": "123456",
+
+  "description": "A valid confirmation code from Cognito."
+
   }
+
+  },
+
+  "required": [
+
+  "email",
+
+  "code"
+
+  ]
+
+  },
+
+  "CreateUserRequestDto": {
+
+  "type": "object",
+
+  "properties": {
+
+  "firstName": {
+
+  "type": "string",
+
+  "example": "Jason",
+
+  "description": "User first name"
+
+  },
+
+  "lastName": {
+
+  "type": "string",
+
+  "example": "Grubble",
+
+  "description": "User last name"
+
+  },
+
+  "email": {
+
+  "type": "string",
+
+  "example": "jason@example.com",
+
+  "description": "User email"
+
+  },
+
+  "password": {
+
+  "type": "string",
+
+  "example": "Test1234",
+
+  "description": "Password"
+
+  },
+
+  "isOrgAdmin": {
+
+  "type": "string",
+
+  "example": "'true' or 'false'",
+
+  "description": "Boolean String",
+
+  "default": "false"
+
+  }
+
+  },
+
+  "required": [
+
+  "firstName",
+
+  "lastName",
+
+  "email",
+
+  "password",
+
+  "isOrgAdmin"
+
+  ]
+
+  },
+
+  "OrgAdminCreateUsersRequestDto": {
+
+  "type": "object",
+
+  "properties": {
+
+  "users": {
+
+  "example": [
+
+  {
+
+  "email": "svetlav444@unionrealtime.com",
+
+  "password": "Temppass123",
+
+  "firstName": "Svetla",
+
+  "lastName": "SS",
+
+  "isOrgAdmin": "false"
+
+  },
+
+  {
+
+  "email": "svetlav555@unionrealtime.com",
+
+  "password": "Demome123",
+
+  "firstName": "Svetlana",
+
+  "lastName": "BB",
+
+  "isOrgAdmin": "false"
+
+  }
+
+  ],
+
+  "description": "Array of users",
+
+  "type": "array",
+
+  "items": {
+
+  "$ref": "#/components/schemas/CreateUserRequestDto"
+
+  }
+
+  }
+
+  },
+
+  "required": [
+
+  "users"
+
+  ]
+
+  },
+
+  "EmailRequestDto": {
+
+  "type": "object",
+
+  "properties": {
+
+  "email": {
+
+  "type": "string",
+
+  "example": "test123@unionrealtime.com",
+
+  "description": "A valid email."
+
+  }
+
+  },
+
+  "required": [
+
+  "email"
+
+  ]
+
+  },
+
+  "ResetPasswordRequestDto": {
+
+  "type": "object",
+
+  "properties": {
+
+  "email": {
+
+  "type": "string",
+
+  "example": "test123@unionrealtime.com",
+
+  "description": "A valid email."
+
+  }
+
+  },
+
+  "required": [
+
+  "email"
+
+  ]
+
+  },
+
+  "ConfirmPasswordResetRequestDto": {
+
+  "type": "object",
+
+  "properties": {
+
+  "email": {
+
+  "type": "string",
+
+  "example": "test123@unionrealtime.com",
+
+  "description": "A valid email."
+
+  },
+
+  "code": {
+
+  "type": "string",
+
+  "example": "123456",
+
+  "description": "A valid confirmation code from Cognito."
+
+  },
+
+  "password": {
+
+  "type": "string",
+
+  "example": "Testpass1234",
+
+  "description": "New password."
+
+  }
+
+  },
+
+  "required": [
+
+  "email",
+
+  "code",
+
+  "password"
+
+  ]
+
+  },
+
+  "AssignOrgRequestDto": {
+
+  "type": "object",
+
+  "properties": {
+
+  "email": {
+
+  "type": "string",
+
+  "example": "jason@example.com",
+
+  "description": "User email"
+
+  },
+
+  "orgId": {
+
+  "type": "string",
+
+  "example": "fe26693b-a4f6-4e4a-9bfd-179dbc77a81",
+
+  "description": "Org ID"
+
+  }
+
+  },
+
+  "required": [
+
+  "email",
+
+  "orgId"
+
+  ]
+
+  },
+
+  "UpdateUserRequestDto": {
+
+  "type": "object",
+
+  "properties": {
+
+  "userId": {
+
+  "type": "string",
+
+  "example": "fe26693b-a4f6-4e4a-9bfd-179dbc77a81",
+
+  "description": "User ID"
+
+  },
+
+  "email": {
+
+  "type": "string",
+
+  "example": "test123@unionrealtime.com",
+
+  "description": "A valid email."
+
+  },
+
+  "firstName": {
+
+  "type": "string",
+
+  "example": "Jason",
+
+  "description": "User first name"
+
+  },
+
+  "middleName": {
+
+  "type": "string",
+
+  "example": "Grubble",
+
+  "description": "User last name"
+
+  },
+
+  "lastName": {
+
+  "type": "string",
+
+  "example": "Grubble",
+
+  "description": "User last name"
+
+  }
+
+  },
+
+  "required": [
+
+  "userId",
+
+  "email",
+
+  "firstName",
+
+  "lastName"
+
+  ]
+
+  }
+
+  }
+
+  }
+
   }
 contentType: yaml

@@ -1,9 +1,9 @@
 _id: req_wrk_2336beb589954b61a99abdfe371b59906d74493f
 type: Request
-parentId: wrk_2336beb589954b61a99abdfe371b5990
-modified: 1669805291953
+parentId: fld_f8302153bca54f84a66112e95687ce9c
+modified: 1669807587920
 created: 1669805291953
-url: "{{ base_url }}/orgs-api/orgs/{{ orgId }}/users/{{ userId }}"
+url: "{{ _.baseUrl }}{{ _.orgPort }}/orgs-api/orgs/{{ orgId }}/users/{{ userId }}"
 name: update user
 description: ""
 method: PATCH

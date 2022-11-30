@@ -1,24 +1,24 @@
-_id: req_wrk_2336beb589954b61a99abdfe371b599086f352e5
+_id: req_wrk_2336beb589954b61a99abdfe371b5990051cf8c0
 type: Request
-parentId: fld_ab077f8c0792454ea2605638f1483dfe
-modified: 1669807567812
-created: 1669805291959
-url: "{{ _.baseUrl }}{{ _.orgPort }}/orgs-api/orgs/{{ orgId }}"
-name: update org
+parentId: fld_5016afe37fde42589e9b4c389b8da67c
+modified: 1669807534448
+created: 1669805749322
+url: "{{ _.baseUrl }}{{ _.authPort }}/auth-api/auth/password/reset"
+name: Initiates a flow to reset password
 description: ""
-method: PATCH
+method: POST
 body:
   mimeType: application/json
   text: |-
     {
-      "orgId": "fe26693b-a4f6-4e4a-9bfd-179dbc77a81"
+      "email": "test123@unionrealtime.com"
     }
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
 authentication: {}
-metaSortKey: -1669805292010
+metaSortKey: -1669805749422
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

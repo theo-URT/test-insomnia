@@ -1,0 +1,36 @@
+_id: req_wrk_2336beb589954b61a99abdfe371b5990f15cee81
+type: Request
+parentId: fld_e90d1628f9754bf4b77406b7e4cf5e18
+modified: 1669807881430
+created: 1669805749325
+url: "{{ _.baseUrl }}{{ _.authPort }}/auth-api/auth/orgs/users"
+name: createAdmin
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "firstName": "Jason",
+      "lastName": "Grubble",
+      "email": "{{ _.adminUserEmail }}",
+      "password": "{{ _.adminUserPassword }}"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json;v=1
+    id: pair_4b18091a8576491c8dff9d4c3831e58b
+  - id: pair_57386b6e88a84875ae7984a4a4084235
+    name: Accept
+    value: application/json;v=1
+    description: ""
+authentication: {}
+metaSortKey: -1669805749425
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

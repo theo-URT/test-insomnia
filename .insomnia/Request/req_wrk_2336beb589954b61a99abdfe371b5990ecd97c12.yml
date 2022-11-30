@@ -1,0 +1,41 @@
+_id: req_wrk_2336beb589954b61a99abdfe371b5990ecd97c12
+type: Request
+parentId: fld_e90d1628f9754bf4b77406b7e4cf5e18
+modified: 1669807540204
+created: 1669805749324
+url: "{{ _.baseUrl }}{{ _.authPort }}/auth-api/auth/orgs/{{ orgId }}/users"
+name: createUsers
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "users": [
+        {
+          "email": "svetlav444@unionrealtime.com",
+          "password": "Temppass123",
+          "firstName": "Svetla",
+          "lastName": "SS"
+        },
+        {
+          "email": "svetlav555@unionrealtime.com",
+          "password": "Demome123",
+          "firstName": "Svetlana",
+          "lastName": "BB"
+        }
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1669805749409.375
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

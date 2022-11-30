@@ -1,9 +1,9 @@
 _id: req_wrk_2336beb589954b61a99abdfe371b599031a4cf32
 type: Request
-parentId: wrk_2336beb589954b61a99abdfe371b5990
-modified: 1669805324973
+parentId: fld_590ea272bae24d3aa1a3ff4ef3e41b30
+modified: 1669807940126
 created: 1669805291957
-url: "{{ base_url }}/orgs-api/orgs/{{ orgId }}/sites"
+url: "{{ _.baseUrl }}{{ _.orgPort }}/orgs-api/orgs/{% variable 'orgId' %}/sites"
 name: Create site
 description: ""
 method: POST
@@ -13,15 +13,26 @@ body:
     {
       "siteName": "Willoughby Cubes",
       "siteTypeIds": [
-        "1"
+        1
       ]
     }
 parameters: []
 headers:
   - name: Content-Type
-    value: application/json
-authentication: {}
-metaSortKey: -1669805291957
+    value: application/json;v=1
+    id: pair_55212c024a3b41339017a7df90cb8778
+  - id: pair_cb04d8bf48f349e5955e16d2e5d0231f
+    name: Accept
+    value: application/json;v=1
+    description: ""
+  - id: pair_ffbddaa065e74b918f8024dd49609b1a
+    name: "{% savevariable 'siteId', 'body', '$.data[0].siteId' %}"
+    value: ""
+    description: ""
+authentication:
+  type: bearer
+  token: "{% variable 'accessToken' %}"
+metaSortKey: -1669805292057
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

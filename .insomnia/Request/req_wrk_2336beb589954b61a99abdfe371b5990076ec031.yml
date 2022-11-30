@@ -1,9 +1,9 @@
 _id: req_wrk_2336beb589954b61a99abdfe371b5990076ec031
 type: Request
-parentId: wrk_2336beb589954b61a99abdfe371b5990
-modified: 1669805539709
+parentId: fld_ab077f8c0792454ea2605638f1483dfe
+modified: 1669807916034
 created: 1669805291960
-url: "{{ base_url }}/orgs-api/orgs"
+url: "{{ _.baseUrl }}{{ _.orgPort }}/orgs-api/orgs"
 name: create org
 description: ""
 method: POST
@@ -17,9 +17,20 @@ body:
 parameters: []
 headers:
   - name: Content-Type
-    value: application/json
-authentication: {}
-metaSortKey: -1669805291960
+    value: application/json;v=1
+    id: pair_3563a5490c2f4c0fac31062cf6a8750f
+  - id: pair_b011cd3086df4e87abb76ff8e8b6e7e9
+    name: Accept
+    value: application/json;v=1
+    description: ""
+  - id: pair_8d138c99ec454b2b8caefa83624e648d
+    name: "{% savevariable 'orgId', 'body', '$.data[0].orgId' %}"
+    value: ""
+    description: ""
+authentication:
+  type: bearer
+  token: "{% variable 'accessToken' %}"
+metaSortKey: -1669805292060
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

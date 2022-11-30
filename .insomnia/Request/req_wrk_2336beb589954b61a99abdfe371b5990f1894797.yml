@@ -1,24 +1,24 @@
-_id: req_wrk_2336beb589954b61a99abdfe371b599086f352e5
+_id: req_wrk_2336beb589954b61a99abdfe371b5990f1894797
 type: Request
-parentId: fld_ab077f8c0792454ea2605638f1483dfe
-modified: 1669807567812
-created: 1669805291959
-url: "{{ _.baseUrl }}{{ _.orgPort }}/orgs-api/orgs/{{ orgId }}"
-name: update org
+parentId: fld_e90d1628f9754bf4b77406b7e4cf5e18
+modified: 1669807541321
+created: 1669805749322
+url: "{{ _.baseUrl }}{{ _.authPort }}/auth-api/auth/resend-verification"
+name: Resend verification code
 description: ""
-method: PATCH
+method: POST
 body:
   mimeType: application/json
   text: |-
     {
-      "orgId": "fe26693b-a4f6-4e4a-9bfd-179dbc77a81"
+      "email": "test123@unionrealtime.com"
     }
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
 authentication: {}
-metaSortKey: -1669805292010
+metaSortKey: -1669805749407.8125
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

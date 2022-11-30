@@ -1,0 +1,38 @@
+_id: req_wrk_2336beb589954b61a99abdfe371b59902736fab2
+type: Request
+parentId: fld_67fd389f530e4010bdfc6bf6310eca36
+modified: 1669807923225
+created: 1669805749327
+url: "{{ _.baseUrl }}{{ _.authPort }}/auth-api/auth/users/login"
+name: Login
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "email": "{{ _.adminUserEmail }}",
+      "password": "{{ _.adminUserPassword }}"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json;v=1
+    id: pair_d3bc804aa9824a43b090243c0f3ac221
+  - id: pair_da8c0fc7bc124694b091a19dbebfa108
+    name: Accept
+    value: application/json;v=1
+    description: ""
+  - id: pair_b96924e39bd24b4996061a2c848c0a37
+    name: "{% savevariable 'accessToken', 'body', '$.data[0].accessToken' %}"
+    value: ""
+    description: ""
+authentication: {}
+metaSortKey: -1669805749427
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

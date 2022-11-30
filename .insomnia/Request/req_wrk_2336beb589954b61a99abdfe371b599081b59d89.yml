@@ -1,9 +1,10 @@
 _id: req_wrk_2336beb589954b61a99abdfe371b599081b59d89
 type: Request
-parentId: wrk_2336beb589954b61a99abdfe371b5990
-modified: 1669805291955
+parentId: fld_1f5b3fb9875f48658ca77d0a60f37884
+modified: 1669807961410
 created: 1669805291955
-url: "{{ base_url }}/orgs-api/orgs/{{ orgId }}/sites/{{ siteId }}/units"
+url: "{{ _.baseUrl }}{{ _.orgPort }}/orgs-api/orgs/{% variable 'orgId'
+  %}/sites/{% variable 'siteId' %}/units"
 name: Create Unit
 description: ""
 method: POST
@@ -13,7 +14,7 @@ body:
     {
       "unitName": "SS-01",
       "unitDescription": "An inside unit with air conditioning.",
-      "siteId": "fe26693b-a4f6-4e4a-9bfd-179dbc77a81",
+      "siteId": "{% variable 'siteId' %}",
       "unitTypeId": 1,
       "statusId": 1,
       "length": 1,
@@ -37,9 +38,20 @@ body:
 parameters: []
 headers:
   - name: Content-Type
-    value: application/json
-authentication: {}
-metaSortKey: -1669805291955
+    value: application/json;v=1
+    id: pair_d714b5633ab84cdb8f6121dbecf9dfce
+  - id: pair_501e4f6232b44d41842fefa383851df0
+    name: Accept
+    value: application/json;v=1
+    description: ""
+  - id: pair_e1aeaeaafbb448af9e5287dc4a762b50
+    name: "{% savevariable 'unitId', 'body', '$.data[0].unitId' %}"
+    value: ""
+    description: ""
+authentication:
+  type: bearer
+  token: "{% variable 'accessToken' %}"
+metaSortKey: -1669805292055
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

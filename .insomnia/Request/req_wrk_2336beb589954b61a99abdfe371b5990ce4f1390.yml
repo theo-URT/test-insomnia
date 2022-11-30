@@ -1,0 +1,34 @@
+_id: req_wrk_2336beb589954b61a99abdfe371b5990ce4f1390
+type: Request
+parentId: fld_e90d1628f9754bf4b77406b7e4cf5e18
+modified: 1669807906975
+created: 1669805749325
+url: "{{ _.baseUrl }}{{ _.authPort }}/auth-api/auth/orgs/users/confirm"
+name: confrimAdminSignup
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "email": "{{ _.adminUserEmail }}",
+      "code": "304155"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json;v=1
+    id: pair_5379d18c5d8748e18b0fbe4adae1c694
+  - id: pair_51201df1d16747cdb1963109023851a4
+    name: Accept
+    value: application/json;v=1
+    description: ""
+authentication: {}
+metaSortKey: -1669805749412.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

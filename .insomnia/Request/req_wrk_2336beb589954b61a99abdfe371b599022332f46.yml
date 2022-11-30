@@ -1,9 +1,9 @@
 _id: req_wrk_2336beb589954b61a99abdfe371b599022332f46
 type: Request
-parentId: wrk_2336beb589954b61a99abdfe371b5990
-modified: 1669805291956
+parentId: fld_590ea272bae24d3aa1a3ff4ef3e41b30
+modified: 1669807574896
 created: 1669805291956
-url: "{{ base_url }}/orgs-api/orgs/{{ orgId }}/sites/{{ siteId }}"
+url: "{{ _.baseUrl }}{{ _.orgPort }}/orgs-api/orgs/{{ orgId }}/sites/{{ siteId }}"
 name: Update site
 description: ""
 method: PATCH
@@ -21,7 +21,7 @@ headers:
   - name: Content-Type
     value: application/json
 authentication: {}
-metaSortKey: -1669805291956
+metaSortKey: -1669805292032
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

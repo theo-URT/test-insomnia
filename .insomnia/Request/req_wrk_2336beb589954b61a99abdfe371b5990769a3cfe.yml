@@ -1,9 +1,9 @@
 _id: req_wrk_2336beb589954b61a99abdfe371b5990769a3cfe
 type: Request
-parentId: wrk_2336beb589954b61a99abdfe371b5990
-modified: 1669805291958
+parentId: fld_ab077f8c0792454ea2605638f1483dfe
+modified: 1669807570168
 created: 1669805291958
-url: "{{ base_url }}/orgs-api/orgs/{{ orgId }}"
+url: "{{ _.baseUrl }}{{ _.orgPort }}/orgs-api/orgs/{{ orgId }}"
 name: find an org
 description: ""
 method: GET
@@ -11,7 +11,7 @@ body: {}
 parameters: []
 headers: []
 authentication: {}
-metaSortKey: -1669805291958
+metaSortKey: -1669805291985
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

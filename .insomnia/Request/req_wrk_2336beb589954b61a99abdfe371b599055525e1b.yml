@@ -1,24 +1,24 @@
-_id: req_wrk_2336beb589954b61a99abdfe371b599086f352e5
+_id: req_wrk_2336beb589954b61a99abdfe371b599055525e1b
 type: Request
-parentId: fld_ab077f8c0792454ea2605638f1483dfe
-modified: 1669807567812
-created: 1669805291959
-url: "{{ _.baseUrl }}{{ _.orgPort }}/orgs-api/orgs/{{ orgId }}"
-name: update org
+parentId: fld_67fd389f530e4010bdfc6bf6310eca36
+modified: 1669807532724
+created: 1669805749326
+url: "{{ _.baseUrl }}{{ _.authPort }}/auth-api/auth/users/logout"
+name: Logout
 description: ""
-method: PATCH
+method: GET
 body:
   mimeType: application/json
   text: |-
     {
-      "orgId": "fe26693b-a4f6-4e4a-9bfd-179dbc77a81"
+      "userId": "test-user-id-01"
     }
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
 authentication: {}
-metaSortKey: -1669805292010
+metaSortKey: -1669805749377
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

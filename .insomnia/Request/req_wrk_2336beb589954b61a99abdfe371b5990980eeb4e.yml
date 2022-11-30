@@ -1,0 +1,29 @@
+_id: req_wrk_2336beb589954b61a99abdfe371b5990980eeb4e
+type: Request
+parentId: fld_e90d1628f9754bf4b77406b7e4cf5e18
+modified: 1669807542156
+created: 1669805749323
+url: "{{ _.baseUrl }}{{ _.authPort }}/auth-api/auth/orgs/{{ orgId }}/users/confirm"
+name: confirmUserSignUp
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "email": "test123@unionrealtime.com",
+      "code": "123456"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1669805749408.5938
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

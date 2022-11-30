@@ -1,0 +1,30 @@
+_id: req_wrk_2336beb589954b61a99abdfe371b5990869c8a1d
+type: Request
+parentId: fld_5016afe37fde42589e9b4c389b8da67c
+modified: 1669807535463
+created: 1669805749319
+url: "{{ _.baseUrl }}{{ _.authPort }}/auth-api/auth/password/confirm"
+name: Confirm reset password
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "email": "test123@unionrealtime.com",
+      "code": "123456",
+      "password": "Testpass1234"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1669805749372
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

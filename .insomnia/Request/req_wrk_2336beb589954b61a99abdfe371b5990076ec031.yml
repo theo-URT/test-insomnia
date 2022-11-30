@@ -1,0 +1,29 @@
+_id: req_wrk_2336beb589954b61a99abdfe371b5990076ec031
+type: Request
+parentId: wrk_2336beb589954b61a99abdfe371b5990
+modified: 1669805539709
+created: 1669805291960
+url: "{{ base_url }}/orgs-api/orgs"
+name: create org
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "orgName": "Morning Star",
+      "orgDescription": "Self storage facility with climate controlled units"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1669805291960
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

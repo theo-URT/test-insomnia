@@ -1,0 +1,31 @@
+_id: req_wrk_2336beb589954b61a99abdfe371b599022332f46
+type: Request
+parentId: wrk_2336beb589954b61a99abdfe371b5990
+modified: 1669805291956
+created: 1669805291956
+url: "{{ base_url }}/orgs-api/orgs/{{ orgId }}/sites/{{ siteId }}"
+name: Update site
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "siteName": "Willoughby Cubes",
+      "siteTypeIds": [
+        "1"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1669805291956
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

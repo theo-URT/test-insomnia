@@ -1,0 +1,21 @@
+_id: req_wrk_2336beb589954b61a99abdfe371b59900b5ef065
+type: Request
+parentId: wrk_2336beb589954b61a99abdfe371b5990
+modified: 1669805291957
+created: 1669805291957
+url: "{{ base_url }}/orgs-api/orgs/{{ orgId }}/sites"
+name: Get sites
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1669805291957
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

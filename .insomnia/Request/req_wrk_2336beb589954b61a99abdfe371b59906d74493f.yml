@@ -1,0 +1,31 @@
+_id: req_wrk_2336beb589954b61a99abdfe371b59906d74493f
+type: Request
+parentId: wrk_2336beb589954b61a99abdfe371b5990
+modified: 1669805291953
+created: 1669805291953
+url: "{{ base_url }}/orgs-api/orgs/{{ orgId }}/users/{{ userId }}"
+name: update user
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "userEmail": "test123@unionrealtime.com",
+      "firstName": "Jason",
+      "middleName": "Grubble",
+      "lastName": "Grubble"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1669805291953
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,28 @@
+_id: req_wrk_2336beb589954b61a99abdfe371b599086f352e5
+type: Request
+parentId: wrk_2336beb589954b61a99abdfe371b5990
+modified: 1669805323759
+created: 1669805291959
+url: "{{ base_url }}/orgs-api/orgs/{{ orgId }}"
+name: update org
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "orgId": "fe26693b-a4f6-4e4a-9bfd-179dbc77a81"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1669805291959
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

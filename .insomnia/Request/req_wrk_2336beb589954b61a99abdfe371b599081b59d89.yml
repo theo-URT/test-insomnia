@@ -1,0 +1,49 @@
+_id: req_wrk_2336beb589954b61a99abdfe371b599081b59d89
+type: Request
+parentId: wrk_2336beb589954b61a99abdfe371b5990
+modified: 1669805291955
+created: 1669805291955
+url: "{{ base_url }}/orgs-api/orgs/{{ orgId }}/sites/{{ siteId }}/units"
+name: Create Unit
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "unitName": "SS-01",
+      "unitDescription": "An inside unit with air conditioning.",
+      "siteId": "fe26693b-a4f6-4e4a-9bfd-179dbc77a81",
+      "unitTypeId": 1,
+      "statusId": 1,
+      "length": 1,
+      "width": 1,
+      "height": 1,
+      "size": 1,
+      "metricId": 1,
+      "standardPrice": 1,
+      "tax": 1,
+      "unitSecurityDeposit": 1,
+      "walkThroughOrder": 1,
+      "building": "1",
+      "currencyId": 1,
+      "floor": 1,
+      "climateControlled": true,
+      "power": true,
+      "alarm": true,
+      "insideUnit": true,
+      "notes": "Example not about the unit"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1669805291955
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

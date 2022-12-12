@@ -1,9 +1,10 @@
 _id: req_wrk_2336beb589954b61a99abdfe371b5990ecd97c12
 type: Request
 parentId: fld_e90d1628f9754bf4b77406b7e4cf5e18
-modified: 1669816146691
+modified: 1670578099123
 created: 1669805749324
-url: "{{ _.baseUrl }}{{ _.authPort }}/auth-api/auth/orgs/{{ orgId }}/users"
+url: "{{ _.baseUrl }}{{ _.authPort
+  }}/auth-api/auth/orgs/5377eea8-5848-4331-9f0d-573f34c2c683/users"
 name: createUsers
 description: ""
 method: POST
@@ -11,20 +12,15 @@ body:
   mimeType: application/json
   text: |-
     {
-      "users": [
-        {
-          "email": "svetlav444@unionrealtime.com",
-          "password": "Temppass123",
-          "firstName": "Svetla",
-          "lastName": "SS"
-        },
-        {
-          "email": "svetlav555@unionrealtime.com",
-          "password": "Demome123",
-          "firstName": "Svetlana",
-          "lastName": "BB"
-        }
-      ]
+    	"users": [
+    		{
+    			"email": "svetlav3cytest01@unionrealtime.com",
+    			"firstName": "Svetla Test User",
+    			"lastName": "Svetla Test User Family Name",
+    			"password": "Temppass&123",
+    			"isOrgAdmin": "somethingelse"
+    		}
+    	]
     }
 parameters: []
 headers:
@@ -35,7 +31,9 @@ headers:
     name: Accept
     value: application/json;v=1
     description: ""
-authentication: {}
+authentication:
+  type: bearer
+  token: eyJraWQiOiIwRThtV2U1dThVNlV1YWJHZmxXcjN0bHFNNFwvZDEwaklVaWc2dW03aE90RT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJmMWQxYjdkMy1lNDdmLTRhZWQtOTZjZS1lOTJiNjRhMWZmN2MiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9sT2tPeGREOHgiLCJjbGllbnRfaWQiOiI0MzI4bWpjMjc3YWR2ZmdpMXR2M2RjN2RsMyIsIm9yaWdpbl9qdGkiOiI0MjRkZTdiMy0zODkxLTQ4ZTctOTU1ZC03YjJhZDQ2MGVkMDUiLCJldmVudF9pZCI6ImMxMTk4NDJiLTRhNzAtNDM4Yi04OWZhLTljZDVhNDM0ZDI0MCIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE2NzA1MTEzMDYsImV4cCI6MTY3MDUxNDkwNiwiaWF0IjoxNjcwNTExMzA2LCJqdGkiOiI1NTMxYjFjMC1mYmRkLTRjZGMtYWM0ZC1kMDY3ODViOGRhMjQiLCJ1c2VybmFtZSI6ImYxZDFiN2QzLWU0N2YtNGFlZC05NmNlLWU5MmI2NGExZmY3YyJ9.YYcL4r4_HOh1JdgHmWxDl_LMKGJRTk358sbhb4gcLohwf7yfKdTfu4pUPMATbJKzZDbAdki8n8JeH2Md_oUgcxoAMjY52-aTRm-gI_kArA00BttcIGhRN33hSzdTPGqzhx3Jdxq2QzFh2bSZOOtArldA_FlnXUDxi9HVfgeFRyIuQ2Qfl59AQFd5vK9JisdYvLrqjm4rU_W5hc4Ln158n4EstLdefaryBRKW7kRt2hW20A-suR1grW_YXmu83BiAXcp36m1Fz6Yb5_ljGksK2dqgK2QYAskSQaX56hQF2zC1j5uYvA2yZsj06O1FCIHlz4cuJPzjkc8hRq8JbAwXhA
 metaSortKey: -1669805749409.375
 isPrivate: false
 settingStoreCookies: true

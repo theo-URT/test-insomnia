@@ -1,16 +1,26 @@
 _id: req_wrk_2336beb589954b61a99abdfe371b59900b5ef065
 type: Request
 parentId: fld_590ea272bae24d3aa1a3ff4ef3e41b30
-modified: 1669807577458
+modified: 1670582674348
 created: 1669805291957
-url: "{{ _.baseUrl }}{{ _.orgPort }}/orgs-api/orgs/{{ orgId }}/sites"
+url: "{{ _.baseUrl }}{{ _.orgPort }}/orgs-api/orgs/{% variable 'orgId' %}/sites"
 name: Get sites
 description: ""
 method: GET
 body: {}
 parameters: []
-headers: []
-authentication: {}
+headers:
+  - id: pair_f892aeca7c1f46229a68b85e7f5801fc
+    name: Content-Type
+    value: application/json;v=1
+    description: ""
+  - id: pair_af4dd59ddec7484d81d24e0e66fb9c45
+    name: Accept
+    value: application/json;v=1
+    description: ""
+authentication:
+  type: bearer
+  token: "{% variable 'accessToken' %}"
 metaSortKey: -1669805292007
 isPrivate: false
 settingStoreCookies: true

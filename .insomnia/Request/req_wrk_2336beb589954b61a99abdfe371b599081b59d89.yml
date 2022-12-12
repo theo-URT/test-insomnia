@@ -1,7 +1,7 @@
 _id: req_wrk_2336beb589954b61a99abdfe371b599081b59d89
 type: Request
 parentId: fld_1f5b3fb9875f48658ca77d0a60f37884
-modified: 1669816218198
+modified: 1670594313386
 created: 1669805291955
 url: "{{ _.baseUrl }}{{ _.orgPort }}/orgs-api/orgs/{% variable 'orgId'
   %}/sites/{% variable 'siteId' %}/units"
@@ -12,28 +12,33 @@ body:
   mimeType: application/json
   text: |-
     {
-      "unitName": "SS-01",
-      "unitDescription": "An inside unit with air conditioning.",
-      "siteId": "{% variable 'siteId' %}",
-      "unitTypeId": 1,
-      "statusId": 1,
-      "length": 1,
-      "width": 1,
-      "height": 1,
-      "size": 1,
-      "metricId": 1,
-      "standardPrice": 1,
-      "tax": 1,
-      "unitSecurityDeposit": 1,
-      "walkThroughOrder": 1,
-      "building": "1",
-      "currencyId": 1,
-      "floor": 1,
-      "climateControlled": true,
-      "power": true,
-      "alarm": true,
-      "insideUnit": true,
-      "notes": "Example not about the unit"
+    	"unitName": "SS-04",
+    	"unitDescription": "An inside unit with air conditioning.",
+    	"siteId": "{% variable 'siteId' %}",
+    	"unitTypeId": 1,
+    	"statusId": 1,
+    	"length": 1,
+    	"width": 1,
+    	"height": 1,
+    	"size": 1,
+    	"metricId": 1,
+    	"standardPrice": 1,
+    	"tax": 1,
+    	"unitSecurityDeposit": 1,
+    	"walkThroughOrder": 1,
+    	"building": "1",
+    	"currencyId": 1,
+    	"floor": 1,
+    	"climateControlled": true,
+    	"power": true,
+    	"alarm": true,
+    	"insideUnit": true,
+    	"notes": "Example note about the unit",
+    	"unitFeatures": [
+    		{
+    			"featureId": 1
+    		}
+    	]
     }
 parameters: []
 headers:

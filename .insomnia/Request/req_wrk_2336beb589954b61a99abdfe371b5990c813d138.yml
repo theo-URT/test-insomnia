@@ -3,7 +3,7 @@ type: Request
 parentId: fld_d923a6d366ba415a8dd43afcf0090623
 modified: 1669816178198
 created: 1669816019439
-url: "{{ _.baseUrl }}{{ _.crmPort }}/crm-api/company/add-contact"
+url: "{{ base_url }}/crm-api/company/add-contact"
 name: Add Contacts to Company
 description: ""
 method: POST

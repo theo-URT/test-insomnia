@@ -3,7 +3,7 @@ type: Request
 parentId: fld_f764beebf7d14ab3bb5a7a305c476684
 modified: 1669816184023
 created: 1669816019442
-url: "{{ _.baseUrl }}{{ _.crmPort }}/crm-api/contacts"
+url: "{{ base_url }}/crm-api/contacts"
 name: Create Contact
 description: ""
 method: POST

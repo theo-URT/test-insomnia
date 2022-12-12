@@ -1,7 +1,7 @@
 _id: env_67c479ae9c3a4211a8b5e42d49cd532d
 type: Environment
 parentId: env_d039a43ec5f9cb9a7139db6175cdd83dd3e15984
-modified: 1669815004617
+modified: 1670669217522
 created: 1669807365965
 name: ManageSpace API env
 data:
@@ -11,7 +11,7 @@ data:
   commercePort: :3035
   crmPort: :3030
   orgPort: :3010
-  adminUserEmail: theov39045@unionrealtime.com
+  adminUserEmail: theov39057@unionrealtime.com
   adminUserPassword: Test1234!
 dataPropertyOrder:
   "&":

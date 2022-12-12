@@ -1,9 +1,10 @@
 _id: req_wrk_2336beb589954b61a99abdfe371b599022332f46
 type: Request
 parentId: fld_590ea272bae24d3aa1a3ff4ef3e41b30
-modified: 1669816214032
+modified: 1670582664998
 created: 1669805291956
-url: "{{ _.baseUrl }}{{ _.orgPort }}/orgs-api/orgs/{{ orgId }}/sites/{{ siteId }}"
+url: "{{ _.baseUrl }}{{ _.orgPort }}/orgs-api/orgs/{% variable 'orgId'
+  %}/sites/{% variable 'siteId' %}"
 name: Update site
 description: ""
 method: PATCH
@@ -11,10 +12,23 @@ body:
   mimeType: application/json
   text: |-
     {
-      "siteName": "Willoughby Cubes",
-      "siteTypeIds": [
-        "1"
-      ]
+    	"siteName": "Willoughby Cubes 3",
+    	"siteTypes": [
+    		{
+    			"siteTypeId": 1
+    		},
+    		{
+    			"siteTypeId": 2
+    		}
+    	],
+    	"siteAmenities": [
+    		{
+    			"amenityId": 1
+    		},
+    		{
+    			"amenityId": 2
+    		}
+    	]
     }
 parameters: []
 headers:
@@ -25,7 +39,9 @@ headers:
     name: Accept
     value: application/json;v=1
     description: ""
-authentication: {}
+authentication:
+  type: bearer
+  token: "{% variable 'accessToken' %}"
 metaSortKey: -1669805292032
 isPrivate: false
 settingStoreCookies: true

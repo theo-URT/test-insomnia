@@ -1,10 +1,10 @@
 _id: req_wrk_2336beb589954b61a99abdfe371b5990d3854c42
 type: Request
 parentId: fld_4dfe1eaebb3f460cbf56735db9ed1cd6
-modified: 1669814960021
+modified: 1669822189323
 created: 1669814819386
 url: "{{ _.baseUrl }}{{ _.commercePort }}/commerce-api/orgs/{% variable 'orgId'
-  %}/merchandise"
+  %}/merchandise6"
 name: Create Merchandise
 description: ""
 method: POST

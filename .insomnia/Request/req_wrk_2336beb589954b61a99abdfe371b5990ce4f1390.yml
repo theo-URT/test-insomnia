@@ -1,7 +1,7 @@
 _id: req_wrk_2336beb589954b61a99abdfe371b5990ce4f1390
 type: Request
 parentId: fld_e90d1628f9754bf4b77406b7e4cf5e18
-modified: 1669807906975
+modified: 1670669252757
 created: 1669805749325
 url: "{{ _.baseUrl }}{{ _.authPort }}/auth-api/auth/orgs/users/confirm"
 name: confrimAdminSignup
@@ -12,7 +12,7 @@ body:
   text: |-
     {
       "email": "{{ _.adminUserEmail }}",
-      "code": "304155"
+      "code": "467728"
     }
 parameters: []
 headers:

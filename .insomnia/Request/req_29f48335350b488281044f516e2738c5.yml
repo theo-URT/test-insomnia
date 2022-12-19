@@ -1,0 +1,32 @@
+_id: req_29f48335350b488281044f516e2738c5
+type: Request
+parentId: fld_638b89f1d91b41c8b7b85baec7e306b8
+modified: 1671100790831
+created: 1671100717099
+url: "{{ _.baseUrl }}{{ _.orgPort }}/orgs-api/orgs/{% variable 'orgId'
+  %}/sites/{% variable 'siteId' %}/amenities/{% variable 'amenityId' %}"
+name: Get Site Amenity
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_b2fb43a76522451c9d0eefa978fa1cd0
+    name: Content-Type
+    value: application/json;v=1
+    description: ""
+  - id: pair_453a4c38696a4679a6649566cfeb2d9e
+    name: Accept
+    value: application/json;v=1
+    description: ""
+authentication:
+  type: bearer
+  token: "{% variable 'accessToken' %}"
+metaSortKey: -1670969186818.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

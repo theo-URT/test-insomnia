@@ -1,0 +1,39 @@
+_id: req_c2849efcb95e4144992b3755efd5bb33
+type: Request
+parentId: fld_beb11003621e464dbd3ceca34352b07c
+modified: 1671444061561
+created: 1671203372857
+url: "{{ _.baseUrl }}{{ _.documentPort }}/document-api/orgs/{% variable 'orgId'
+  %}/templates/{% variable 'templateId' %}"
+name: Update Template
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"templateName": "Test Template 2 updated",
+    	"templateDescription": "Test template description 2 updated",
+    	"markup": "PGh0bWw+PGJvZHk+PGRpdj48cD4gV2VsY29tZSB0byBvdXIgb3JnYW5pemF0aW9uIHt7Y3VzdG9tZXJOYW1lfX0hIDwvcD48L2Rpdj48L2JvZHk+PC9odG1sPg=="
+    }
+parameters: []
+headers:
+  - id: pair_9f498fab85db47e7b32cadfdbbc333c7
+    name: Content-Type
+    value: application/json;v=1
+    description: ""
+  - id: pair_5cda3d20edce4507a1019c2d0e9f8046
+    name: Accept
+    value: application/json;v=1
+    description: ""
+authentication:
+  type: bearer
+  token: "{% variable 'accessToken' %}"
+metaSortKey: -1671152253762
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

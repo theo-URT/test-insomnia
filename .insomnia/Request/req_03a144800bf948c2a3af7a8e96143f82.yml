@@ -1,0 +1,32 @@
+_id: req_03a144800bf948c2a3af7a8e96143f82
+type: Request
+parentId: fld_beb11003621e464dbd3ceca34352b07c
+modified: 1671270147457
+created: 1671270137366
+url: "{{ _.baseUrl }}{{ _.documentPort }}/document-api/orgs/{% variable 'orgId'
+  %}/templates/{% variable 'templateId' %}"
+name: Get Template
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_0a4b71b4b67c47d7a780e1d95275ed3a
+    name: Content-Type
+    value: application/json;v=1
+    description: ""
+  - id: pair_5cda3d20edce4507a1019c2d0e9f8046
+    name: Accept
+    value: application/json;v=1
+    description: ""
+authentication:
+  type: bearer
+  token: "{% variable 'accessToken' %}"
+metaSortKey: -1671160555568
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
